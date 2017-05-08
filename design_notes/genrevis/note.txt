@@ -1,0 +1,34 @@
+##################################################
+#                   Genre Geomap
+##################################################
+
+# Movie Genres Color Category Reference
+1. https://claragiacaloneportfolio.wordpress.com/2015/01/09/imdb-website/
+
+
+##################################################
+#                   Bubble Chart
+##################################################
+
+# Bubble Chart ref
+1. https://bl.ocks.org/mbostock/4063269
+
+# Convert csv to pack accepted layout
+1. http://plnkr.co/edit/faZvO6aJLbw8n4r8x2db?p=preview << WORKING ON THIS ONE
+2. http://stackoverflow.com/questions/23447398/d3-cant-get-packed-circles-to-work-from-csv
+
+# Challenge
+1. Deep copy using jQuery - http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript
+2. flatten csv data to hierachy data type for circle packing/bubble chart
+
+
+##################################################
+#                   Sankey Chart
+##################################################
+
+# Challenge
+1. change data to graph format
+2. distinguish click and drag behavior - >ref :https://bl.ocks.org/mbostock/a84aeb78fea81e1ad806
+3. changing path color need complex logic
+4. change the sorting algorithm in sankey.js, so it appears as descending order as the data I filtered using R script.
+5. TODO: add label here

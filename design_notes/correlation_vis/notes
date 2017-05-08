@@ -1,0 +1,22 @@
+
+
+##################################################
+#                   Correlation Basics
+##################################################
+# Basic Intro
+1. https://en.wikipedia.org/wiki/Multiple_correlation
+2. https://www.mathsisfun.com/data/correlation.html
+
+# Negative correlation explanation:
+3. http://www.investopedia.com/terms/n/negative-correlation.asp
+
+# Sample for Data Vis in Correlation Analysis
+1. https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html (corplot R package)
+
+# Correlation Calculator
+1. http://www.socscistatistics.com/tests/pearson/Default2.aspx
+
+
+# Challenge
+1. correlation to matrix transform
+2. page linking inside a <li> element, use window.location.href='your web url'

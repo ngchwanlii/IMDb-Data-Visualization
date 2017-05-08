@@ -1,0 +1,22 @@
+.sankeyNode rect {
+    cursor: move;
+    fill-opacity: 0.9;
+    shape-rendering: crispEdges;
+  }
+
+.sankeyNode text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 600;
+  stroke: "black";
+}
+
+.sankeyLink {
+  fill: none;
+  stroke: black;
+  stroke-opacity: .1;
+}
+
+.sankeyLink:hover {
+  stroke-opacity: .5;
+}
