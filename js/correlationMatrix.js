@@ -61,42 +61,46 @@ function drawCorrelationMatrix(){
     var rows = correlationMatrix.length;
     var cols = correlationMatrix[0].length;
 
+    // console.log(cols);
+
     var x = d3.scaleBand()
-    .domain([d3.range(cols)])
+    .domain(d3.range(cols))
     .range([0, corMatrixConfig.w]);
+
 
     var y = d3.scaleBand()
     .domain(d3.range(rows))
     .range([0, corMatrixConfig.h]);
 
+
     var row = svg_4.selectAll(".row")
 	    .data(correlationMatrix)
 	  	.enter().append("g")
 	    .attr("class", "row")
-	    .attr("transform", function(d, i) {return translate(x(i), 0);});
+	    .attr("transform", function(d, i) {return "translate(0," + y(i) + ")"; });
 
 
   	var cell = row.selectAll(".cell")
   	    .data(function(d) { return d; })
   			.enter().append("g")
   	    .attr("class", "cell")
-  	    .attr("transform", function(d, i) { return translate(x(i), 0);});
+  	    .attr("transform", function(d, i) {return "translate(" + x(i) + ", 0)"; });
 
   	cell.append('rect')
   	    .attr("width", x.bandwidth())
   	    .attr("height", y.bandwidth())
   	    .style("stroke-width", 0);
 
-      cell.append("text")
-  	    .attr("dy", ".32em")
-  	    .attr("x", x.bandwidth() / 2)
-  	    .attr("y", y.bandwidth() / 2)
-  	    .attr("text-anchor", "middle")
-  	    .style("fill", function(d, i) { return d >= maxVal/2 ? 'white' : 'black'; })
-  	    .text(function(d, i) { return d; });
+    // cell.append("text")
+	  //   .attr("dy", ".32em")
+	  //   .attr("x", x.bandwidth() / 2)
+	  //   .attr("y", y.bandwidth() / 2)
+	  //   .attr("text-anchor", "middle")
+	  //   .style("fill", function(d, i) { return d >= maxVal/2 ? 'white' : 'black'; })
+	  //   .text(function(d, i) { return d; });
 
   	row.selectAll(".cell")
-  	    .data(function(d, i) { return correlationMatrix[i]; })
+  	    .data(function(d, i) {return correlationMatrix[i]; })
   	    .style("fill", corMatrixColorScale);
 
   	var labels = svg_4.append('g')
@@ -106,7 +110,7 @@ function drawCorrelationMatrix(){
   	    .data(correlationMatrixLabel)
   	    .enter().append("g")
   	    .attr("class", "column-label")
-  	    .attr("transform", function(d, i) { return translate(x(i), corMatrixConfig.h)});
+        .attr("transform", function(d, i) { return "translate(" + x(i) + "," + corMatrixConfig.h + ")"; });
 
   	columnLabels.append("line")
   		.style("stroke", "black")
@@ -116,19 +120,19 @@ function drawCorrelationMatrix(){
   	    .attr("y1", 0)
   	    .attr("y2", 5);
 
-  	columnLabels.append("text")
-  	    .attr("x", 0)
-  	    .attr("y", y.bandwidth() / 2)
-  	    .attr("dy", ".82em")
-  	    .attr("text-anchor", "end")
-  	    .attr("transform", "rotate(-60)")
-  	    .text(function(d, i) { return d; });
+  	// columnLabels.append("text")
+  	//     .attr("x", 0)
+  	//     .attr("y", y.bandwidth() / 2)
+  	//     .attr("dy", ".82em")
+  	//     .attr("text-anchor", "end")
+  	//     .attr("transform", "rotate(-60)")
+  	//     .text(function(d, i) { return d; });
 
   	var rowLabels = labels.selectAll(".row-label")
   	    .data(correlationMatrixLabel)
   	  .enter().append("g")
   	    .attr("class", "row-label")
-  	    .attr("transform", function(d, i) { return translate(0, y(i));});
+  	     .attr("transform", function(d, i) { return "translate(" + 0 + "," + y(i) + ")"; });
 
   	rowLabels.append("line")
   		.style("stroke", "black")
@@ -138,12 +142,12 @@ function drawCorrelationMatrix(){
   	    .attr("y1", y.bandwidth() / 2)
   	    .attr("y2", y.bandwidth() / 2);
 
-  	rowLabels.append("text")
-  	    .attr("x", -8)
-  	    .attr("y", y.bandwidth() / 2)
-  	    .attr("dy", ".32em")
-  	    .attr("text-anchor", "end")
-  	    .text(function(d, i) { return d; });
+  	// rowLabels.append("text")
+  	//     .attr("x", -8)
+  	//     .attr("y", y.bandwidth() / 2)
+  	//     .attr("dy", ".32em")
+  	//     .attr("text-anchor", "end")
+  	//     .text(function(d, i) { return d; });
 
   })
 }
