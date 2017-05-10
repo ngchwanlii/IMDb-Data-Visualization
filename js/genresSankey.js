@@ -94,7 +94,7 @@ function drawSankey(sankeyOp){
           // set it as 2 decimal point after this string representation of $
          selectedNodeVal =  selectedNodeVal.substring(0, selectedNodeVal.lastIndexOf(".")+3)
                             // slice(-1) -> get last character of string (ex: "M" = million)
-                            + selectedNodeVal.slice(-1);         
+                            + selectedNodeVal.slice(-1);
       }
       // ROI
       else {
@@ -162,7 +162,8 @@ function drawSankey(sankeyOp){
         .style("stroke-width", function(d) {
           return Math.max(1, d.dy);
         })
-        .sort(function(a, b) { return b.dy - a.dy; });
+        .sort(function(a, b) { return b.dy - a.dy; })
+
 
     // add link titles
     link.append("title")
@@ -186,7 +187,9 @@ function drawSankey(sankeyOp){
           .on("start", function() {
             this.parentNode.appendChild(this);
           })
-          .on("drag", dragmove));
+          .on("drag", dragmove)
+        )
+
 
     // add rectangles nodes
     node.append("rect")

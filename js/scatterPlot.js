@@ -189,7 +189,7 @@ function drawScatterPlot(pairX,pairY) {
   dotGroup.selectAll(".scatDot")
      .data(scatData)
      .enter()
-     .append("circle")
+     .append("circle")     
      .attr("class", function(d, i) {
          return "scatDot " + d.id;
      })
@@ -285,7 +285,7 @@ function scatMouseOver(elem, d, pairX, pairY){
     if(pairX != "imdbScore"){
         content += "<br><b>" + mouseOverLabel[pairX] + ": </b>" + d[pairX];
     }
-  
+
     // then set this director/actor name
     content += "<br><b>" + isDirectorOrActor[pairY] + ": </b>" + d[convertToGetDirectorOrActorName[pairY]] +
                "<br><b>" + mouseOverLabel[pairY] + ": </b>" + d[pairY];
