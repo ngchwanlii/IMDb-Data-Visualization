@@ -8,13 +8,13 @@
   pointer-events: all;
 }
 /*genres tooltip css style*/
-.genresTooltip {
+.myTooltip {
   position: absolute;
   z-index: 10;
   visibility: hidden;
 }
 
-.genresTooltipActive {
+.myTooltipActive {
   pointer-events: none;
   position: absolute;
   visibility: visible;
@@ -10312,12 +10312,12 @@ footer .btn {
 
 /*for sankey diagram*/
 .genres-vis2 {
-  height: 600px;
+  height: 700px;
 }
 
 /* zxc working at this graph */
 .statistics-vis1 {
-  height: 600px;
+  height: 800px;
 }
 
 

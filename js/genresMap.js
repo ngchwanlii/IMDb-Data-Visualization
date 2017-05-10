@@ -64,8 +64,6 @@ var genresColorScale = d3.scaleOrdinal()
     ]
   );
 
-  
-
 /* million converter */
 // var tmp = d3.format("s")(2);
 // var zxc = d3.format("s")(800000000);
@@ -87,7 +85,6 @@ function ready(err, geoData, data){
   if (err) throw err;
 
   // get all available countries in this data (use to filter countries that don't have data)
-
 
   // projection.fitSize([genresMapConfig.w, genresMapConfig.h], geoData);
   projection.fitSize([genresMapConfig.w, genresMapConfig.h], geoData)
@@ -130,7 +127,7 @@ function ready(err, geoData, data){
                       "<br><b>Top Genre: </b>" + d.topGenre +
                         "<br><b>Avg. IMDb Score: </b>" + d.topGenreMeanIMDbScore;
 
-        tip(this, "genresTooltip", "genresTooltipActive",  true, content);
+        tip(this, "myTooltip", "myTooltipActive",  true, content);
 
 
       })
@@ -147,7 +144,7 @@ function ready(err, geoData, data){
                         "<br><b>Avg. IMDb Score: </b>" + d.topGenreMeanIMDbScore;
 
         // tooltip
-        tip(this, "genresTooltip", "genresTooltipActive",  true, content);
+        tip(this, "myTooltip", "myTooltipActive",  true, content);
       })
       .on('mouseout', function(d){
 
@@ -159,7 +156,7 @@ function ready(err, geoData, data){
 
         var content = "";
 
-        tip(this, "genresTooltip", "genresTooltipActive",  false, content);
+        tip(this, "myTooltip", "myTooltipActive",  false, content);
 
       })
       .on("click", genreMapClicked);

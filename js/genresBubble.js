@@ -74,51 +74,55 @@ function drawBubble(genreData, availableCountries, selection){
       // .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
+
   node.append("circle")
-     .attr("id", function(d){return d.data.genre})
-     .attr("r", function(d){d._r = d.r; return d.r;})
-     .style("fill", function(d) {return genresColorScale(d.data.genre)})
-     .on("mouseover", function(d){
+      .attr("id", function(d){return d.data.genre})
+      .on("mouseover", function(d){
 
-       d3.select(this)
-         .style("stroke", "black")
-         .style("stroke-width", 3.5)
-         .style("cursor", "pointer");
+        d3.select(this)
+          .style("stroke", "black")
+          .style("stroke-width", 3.5)
+          .style("cursor", "pointer");
 
-      var content = "<b>Genre: </b>" + d.data.genre +
-                   "<br><b>Avg. IMDb Score: </b>" + d.data.meanIMDbScore +
-                   "<br><b># of Genre Counts: </b>" + d.data.genreTypeCount +
-                   "<br><b># of Voted Users: </b>" + d.data.numVotedUsers;
+       var content = "<b>Genre: </b>" + d.data.genre +
+                    "<br><b>Avg. IMDb Score: </b>" + d.data.meanIMDbScore +
+                    "<br><b># of Genre Counts: </b>" + d.data.genreTypeCount +
+                    "<br><b># of Voted Users: </b>" + d.data.numVotedUsers;
 
-      var tmp = this;
-     d.data.genre.split(/(?=[A-Z][^A-Z])/g).forEach(function(t){
-       textData[t] = {"content": content, "bubble": tmp};
-     })
+       var tmp = this;
+      d.data.genre.split(/(?=[A-Z][^A-Z])/g).forEach(function(t){
+        textData[t] = {"content": content, "bubble": tmp};
+      })
 
-      tip(this, "genresTooltip", "genresTooltipActive",  true, content);
+       tip(this, "myTooltip", "myTooltipActive",  true, content);
 
-     })
-     .on("mousemove", function(d){
-       d3.select(this)
-         .style("stroke", "black")
-         .style("stroke-width", 3.5)
-         .style("cursor", "pointer");
+      })
+      .on("mousemove", function(d){
+        d3.select(this)
+          .style("stroke", "black")
+          .style("stroke-width", 3.5)
+          .style("cursor", "pointer");
 
-      var content = "<b>Genre: </b>" + d.data.genre +
-                   "<br><b>Avg. IMDb Score: </b>" + d.data.meanIMDbScore +
-                   "<br><b># of Genre Counts: </b>" + d.data.genreTypeCount +
-                   "<br><b># of Voted Users: </b>" + d.data.numVotedUsers;
+       var content = "<b>Genre: </b>" + d.data.genre +
+                    "<br><b>Avg. IMDb Score: </b>" + d.data.meanIMDbScore +
+                    "<br><b># of Genre Counts: </b>" + d.data.genreTypeCount +
+                    "<br><b># of Voted Users: </b>" + d.data.numVotedUsers;
 
-      tip(this, "genresTooltip", "genresTooltipActive", true, content);
-     })
-     .on("mouseout", function(d){
-       d3.select(this)
-         .style("stroke", "white")
-         .style("stroke-width", 0.1)
-         .style("cursor", "pointer");
+       tip(this, "myTooltip", "myTooltipActive", true, content);
+      })
+      .on("mouseout", function(d){
+        d3.select(this)
+          .style("stroke", "white")
+          .style("stroke-width", 0.1)
+          .style("cursor", "pointer");
 
-      tip(this, "genresTooltip", "genresTooltipActive", false , "");
-     });
+       tip(this, "myTooltip", "myTooltipActive", false , "");
+      })
+     .transition()
+     .delay(300)
+     .duration(750)
+     .attr("r", function(d){ return d.r;})
+     .style("fill", function(d) {return genresColorScale(d.data.genre)});
 
 
   node.append("clipPath")
@@ -145,7 +149,7 @@ function drawBubble(genreData, availableCountries, selection){
       // hover on text cursor
       d3.select(this).style("cursor", "pointer");
 
-      tip(textData[d].bubble, "genresTooltip", "genresTooltipActive", true, textData[d].content);
+      tip(textData[d].bubble, "myTooltip", "myTooltipActive", true, textData[d].content);
 
      })
      .on("mousemove", function(d){
@@ -155,14 +159,14 @@ function drawBubble(genreData, availableCountries, selection){
 
       d3.select(this).style("cursor", "pointer");
 
-      tip(textData[d].bubble, "genresTooltip", "genresTooltipActive", true, textData[d].content);
+      tip(textData[d].bubble, "myTooltip", "myTooltipActive", true, textData[d].content);
      })
      .on("mouseout", function(d){
        d3.select(textData[d].bubble)
          .style("stroke", "black")
          .style("stroke-width", 0.1);
 
-      tip(textData[d].bubble, "genresTooltip", "genresTooltipActive", false , "");
+      tip(textData[d].bubble, "myTooltip", "myTooltipActive", false , "");
      })
      .style("fill", "white")
      .style("font-weight", "bolder")

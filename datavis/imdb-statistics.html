@@ -18,20 +18,23 @@
   <link href="../assets/css/demo.css" rel="stylesheet" />
   <!-- CSS for vertical nav dot -->
   <link href="../assets/css/vertical-nav.css" rel="stylesheet" />
+  <link href="../assets/css/cor.css" rel="stylesheet" />
   <!--     Fonts and icons     -->
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="http://d3js.org/d3.v3.js"></script>
   <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
   <script src="../js/tooltip.js"></script>
   <script src="../js/util.js"></script>
-  <link href="../assets/css/cor.css" rel="stylesheet" />
+
 
 </head>
 
 <body>
-  <div id="genresTooltip" class="genresTooltip"></div>
+  <div id="myTooltip" class="myTooltip"></div>
   <div class="wrapper">
     <!-- sidebar -->
     <div class="sidebar" data-active-color="purple" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
@@ -52,9 +55,9 @@
       </div>
       <div class="sidebar-wrapper">
         <div class="user">
-          <a href="../web/about.html">
+          <a href="./about.html">
             <div class="photo">
-              <img src="../assets/img/faces/jayng_profile.jpg">
+              <img src="../assets/img/faces/jayng_profile.jpg" />
             </div>
           </a>
         </div>
@@ -127,25 +130,37 @@
           <!-- all vis put inside this row  -->
           <div class="row">
 
-          <!-- correlation matrix  row -->
-          <div class="col-md-12">
-              <div class="card">
-                  <div class="card-header card-header-icon" data-background-color="black">
-                      <i class="material-icons">language</i>
-                  </div>
-                  <div class="card-content statistics-vis1" id="statistics-vis1">
-
-                    <h4 class="card-title">Correlation Analysis </h4>
-
-                    <div id="correlationMatrixContainer" class="map">
-                      <!-- correlation scatterplot matrix svg here -->
-
+            <!-- correlation matrix  row -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="black">
+                        <i class="material-icons">language</i>
+                    </div>
+                    <div class="card-content statistics-vis1" id="statistics-vis1">
+                      <h2 class="card-title" style="margin-top: -15px">Correlation Analysis </h2>
+                      <div class="col-md-5">
+                        <h4 class="card-title" style="margin: 10px 0 0 250px">Correlation Matrix </h4>
+                        <div id="correlationMatrixContainer">
+                          <!-- correlation scatterplot matrix svg here -->
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-md-offset-1">
+                        <!-- <h4 class="card-title" style="margin: 150px 0 0 220px">Scatter Plot</h4> -->
+                        <h4 class="card-title" style="margin: 130px 0 0 220px">Scatter Plot</h4>
+                        <text id="r_coefficient" style="margin: 0px 0 20px 240px;"></text>
+                        <div id="scatterPlotContainer">
+                          <!-- scatterplot  matrix svg here -->
+                        </div>
+                      </div>
                     </div>
 
 
-                  </div>
-              </div>
+                </div>
+            </div>
           </div>
+
+
+
 
 
         </div>
@@ -215,6 +230,8 @@
 <script src="../assets/js/jquery-jvectormap.js"></script>
 <!-- Sliders Plugin -->
 <script src="../assets/js/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <!-- Select Plugin -->
 <script src="../assets/js/jquery.select-bootstrap.js"></script>
 <!--  DataTables.net Plugin    -->
@@ -229,8 +246,10 @@
 <script src="../assets/js/jquery.tagsinput.js"></script>
 <!-- Material Dashboard javascript methods -->
 <script src="../assets/js/material-dashboard.js"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
 
-<!-- data visualization script -->
 <script src="../js/correlationMatrix.js"></script>
+<script src="../js/scatterPlot.js"></script>
 
 </html>

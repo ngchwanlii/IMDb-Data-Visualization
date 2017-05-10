@@ -34,7 +34,7 @@
 </head>
 
 <body>
-  <div id="genresTooltip" class="genresTooltip"></div>
+  <div id="myTooltip" class="myTooltip"></div>
   <div class="wrapper">
     <!-- sidebar -->
     <div class="sidebar" data-active-color="purple" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
@@ -55,7 +55,7 @@
       </div>
       <div class="sidebar-wrapper">
         <div class="user">
-          <a href="../web/about.html">
+          <a href="./about.html">
             <div class="photo">
               <img src="../assets/img/faces/jayng_profile.jpg" />
             </div>
@@ -136,7 +136,7 @@
                   <i class="material-icons">language</i>
                 </div>
                 <div class="card-content genres-vis1-h1" id="genres-vis1">
-                  <h4 class="card-title">Movie Genre Rating by Country</h4>
+                  <h2 class="card-title" style="margin-top:-15px;">Movie Genre Rating by Country</h2>
                   <div class="row genres-vis1-h2">
                     <div class="col-md-5">
                       <div class="map" style="height:500px">
@@ -166,18 +166,32 @@
                   </div>
                   <div class="card-content genres-vis2" id="genres-vis2">
 
-                    <h4 class="card-title">Top 10 Movie Genres' Flows </h4>
+                    <h2 class="card-title" style="margin-top:-15px">Top 10 Movie Genres' Flows </h2>
                     <!-- user selection -->
-                    <div style="width: 200px;">
-                      <select id="sankeyDropdownMenu"class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
-                        <option value="0" selected> by Gross Earning</option>
-                        <option value="1">by Profit</option>
-                        <option value="2">by ROI</option>
+                    <div style="width: 200px; margin-left: 420px">
+                      <select id="sankeyDropdownMenu" class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
+                        <option value="0" selected> by Gross Earning ($)</option>
+                        <option value="1">by Profit ($)</option>
+                        <option value="2">by ROI (%)</option>
                       </select>
+                    </div>
+
+                    <!-- <div style="height: 100px">
+                      <span class="sankeyOutsideLabel" style="margin-left: 70px;">Movie</span>
+                      <span class="sankeyOutsideLabel" style="margin-left: 960px;">Genres</span>
+                    </div> -->
+
+
+                    <!-- <div id="symbol" -->
+                    <div class="tab-content tab-space">
+                      <!-- <span id="label1" class="col-md-1" style="width: 33%; margin-left: 30px">Movies</span> -->
+                      <span id="label1" class="col-md-5">Movies</span>
+                      <span id="label2" class="col-md-5">($/%)</span>
+                      <span id="label3" >Genres</span>
+
                     </div>
                     <div id="genresSankeyContainer" class="map">
                       <!-- sankey diagram here -->
-
                     </div>
 
 
@@ -256,6 +270,8 @@
 <script src="../assets/js/jquery-jvectormap.js"></script>
 <!-- Sliders Plugin -->
 <script src="../assets/js/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <!-- Select Plugin -->
 <script src="../assets/js/jquery.select-bootstrap.js"></script>
 <!--  DataTables.net Plugin    -->
@@ -270,6 +286,17 @@
 <script src="../assets/js/jquery.tagsinput.js"></script>
 <!-- Material Dashboard javascript methods -->
 <script src="../assets/js/material-dashboard.js"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+<!-- <script type="text/javascript">
+  $(document).ready(function() {
+
+    // Javascript method's body can be found in assets/js/demos.js
+    demo.initDashboardPageCharts();
+
+    demo.initVectorMap();
+  });
+</script> -->
 
 <!-- genresMap js -->
 

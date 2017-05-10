@@ -7,7 +7,7 @@
 .sankeyNode text {
   pointer-events: none;
   text-shadow: 0 1px 0 #fff;
-  font-weight: 600;
+  font-weight: 400;
   stroke: "black";
 }
 
@@ -19,4 +19,24 @@
 
 .sankeyLink:hover {
   stroke-opacity: .5;
+}
+
+#label1 {
+  font-size: 15px;
+  margin-left: 30px;
+  font-weight: 600;
+  stroke: "black";
+}
+
+#label2 {
+  font-size: 15px;
+  margin-left: -5px;
+  font-weight: 600;
+  stroke: "black";
+}
+
+#label3 {
+  font-size: 15px;
+  font-weight: 600;
+  stroke: "black";
 }

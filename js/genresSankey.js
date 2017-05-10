@@ -28,8 +28,8 @@ var dataVariable = {
 var sankeyConfig = {
   w: 960,
   h: 400,
-  top: 10,
-  left: 70,
+  top: 5,
+  left: 50,
   offsetX: 20,
   bot: 20,
 }
@@ -41,19 +41,26 @@ var svg_3 = div.append("svg")
 .attr("id", "genresSankey")
 .attr("width", sankeyConfig.w)
 .attr("height", sankeyConfig.h)
-.attr("transform", translate(sankeyConfig.left, sankeyConfig.top))
-// .style("background-color", "black");
 
-// var linkRelationShip = d3.map();
+var sankeyGroup = svg_3.append("g")
+  .attr("transform", translate(sankeyConfig.left, sankeyConfig.top))
+  .style("background-color", "black");
+
+
 
 // drop down menu
 var firstTime = true;
 d3.select("#sankeyDropdownMenu")
 .on("change", function(){
-  svg_3.selectAll("*").remove();
+  sankeyGroup.selectAll("*").remove();
+
+  // reset global properties
+  sankeyGenres = {};
+  selectedValToGenresRecord = {};
+  sankeyClickedRect = d3.select(null);
+  pathElem = d3.select(null);
 
   sankeyOp = d3.select(this).node().value;
-
   drawSankey(sankeyOp);
 
 })
@@ -66,7 +73,7 @@ function drawSankey(sankeyOp){
   var sankey = d3.sankey()
        .nodeWidth(15)
        .nodePadding(10)
-       .size([sankeyConfig.w-2*sankeyConfig.offsetX, sankeyConfig.h]);
+       .size([sankeyConfig.w-3*sankeyConfig.offsetX, sankeyConfig.h-sankeyConfig.bot]);
 
   var path = sankey.link();
 
@@ -85,7 +92,9 @@ function drawSankey(sankeyOp){
       if(sankeyOp != 2 ){
          selectedNodeVal = d3.format("s")(d[dataVariable[sankeyOp]]);
           // set it as 2 decimal point after this string representation of $
-         selectedNodeVal =  selectedNodeVal.substring(0, selectedNodeVal.lastIndexOf(".")+3) + selectedNodeVal.slice(-1);  // slice(-1) -> get last character of string (probably be "M" = million, but maybe other symbol such as "B" = billion)
+         selectedNodeVal =  selectedNodeVal.substring(0, selectedNodeVal.lastIndexOf(".")+3)
+                            // slice(-1) -> get last character of string (ex: "M" = million)
+                            + selectedNodeVal.slice(-1);         
       }
       // ROI
       else {
@@ -145,7 +154,7 @@ function drawSankey(sankeyOp){
 
 
     // add link
-    link = svg_3.append("g").selectAll(".sankeyLink")
+    link = sankeyGroup.append("g").selectAll(".sankeyLink")
         .data(graph.links)
       .enter().append("path")
         .attr("class", "sankeyLink")
@@ -163,7 +172,7 @@ function drawSankey(sankeyOp){
           });
 
     // add in the nodes
-    var node = svg_3.append("g").selectAll(".sankeyNode")
+    var node = sankeyGroup.append("g").selectAll(".sankeyNode")
         .data(graph.nodes)
       .enter().append("g")
         .attr("class", "sankeyNode")
@@ -242,7 +251,7 @@ function sankeyClicked(d){
 
     pathElem.style("stroke", "black")
     .style("stroke-opacity", function(){
-      return 0.2;
+      return 0.1;
     });
     // reset
     sankeyClickedRect = d3.select(null);
@@ -252,7 +261,7 @@ function sankeyClicked(d){
 
   sankeyClickedRect = d;
 
-  pathElem = svg_3.select("g")
+  pathElem = sankeyGroup.select("g")
   .selectAll(".sankeyLink")
   // filter the right link for highlight purpose
   .filter(function(link){
@@ -275,6 +284,8 @@ function sankeyClicked(d){
   .style("stroke-opacity", function(){
     return 0.5;
   });
+
+
 }
 
 
@@ -286,7 +297,7 @@ function sankeyConvert(d){
   d.imdbScore = +d.imdbScore;
   d["ROI"] = +d["ROI"];
 
-  // record selected option
+  // record selected option for path highlight
   selectedValToGenresRecord[d[dataVariable[sankeyOp]]] = d.genres;
 
   d.genres.forEach(function(g){

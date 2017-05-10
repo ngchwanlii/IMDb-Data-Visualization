@@ -1,9 +1,31 @@
-.axis text {
-    font: 10px sans-serif;
+/* Correlation Matrix css */
+.corLabel {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 
-.axis line, .axis path {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
+#correlationMatrixContainer {
+  margin-top: 0px;
+}
+
+
+/* Scatterplot css */
+.scatDot {
+  opacity: 1;
+  fill: #7A99AC;
+  stroke: black;
+  stroke-opacity: 0.5;
+}
+
+.scatDot.active {
+  fill: red;
+  stroke-opacity: 1;
+  r: 5;
+}
+
+#r_coefficient {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
