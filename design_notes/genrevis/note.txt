@@ -32,3 +32,11 @@
 3. changing path color need complex logic
 4. change the sorting algorithm in sankey.js, so it appears as descending order as the data I filtered using R script.
 5. TODO: add label here
+
+
+
+##################################################
+#                   Time Series Scatterplot
+##################################################
+1.clearInterval https://www.w3schools.com/jsref/met_win_clearinterval.asp
+2.setInterval function: https://www.w3schools.com/jsref/met_win_setinterval.asp

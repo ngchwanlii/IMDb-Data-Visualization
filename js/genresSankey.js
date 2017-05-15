@@ -46,10 +46,7 @@ var sankeyGroup = svg_3.append("g")
   .attr("transform", translate(sankeyConfig.left, sankeyConfig.top))
   .style("background-color", "black");
 
-
-
 // drop down menu
-var firstTime = true;
 d3.select("#sankeyDropdownMenu")
 .on("change", function(){
   sankeyGroup.selectAll("*").remove();
@@ -162,8 +159,7 @@ function drawSankey(sankeyOp){
         .style("stroke-width", function(d) {
           return Math.max(1, d.dy);
         })
-        .sort(function(a, b) { return b.dy - a.dy; })
-
+        .sort(function(a, b) { return b.dy - a.dy; });
 
     // add link titles
     link.append("title")
@@ -187,9 +183,7 @@ function drawSankey(sankeyOp){
           .on("start", function() {
             this.parentNode.appendChild(this);
           })
-          .on("drag", dragmove)
-        )
-
+          .on("drag", dragmove));
 
     // add rectangles nodes
     node.append("rect")

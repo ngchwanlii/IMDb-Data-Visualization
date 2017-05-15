@@ -4762,7 +4762,8 @@ be a descendant of the grid when it is being dragged.
  */
 select.bs-select-hidden,
 select.selectpicker {
-  display: none !important;
+  /*display: none !important;*/
+  display: inline !important;
 }
 
 .bootstrap-select {
@@ -5357,6 +5358,7 @@ h2.title {
 .card-description,
 .footer-big p {
   color: #3C4858;
+  font-size: 15px;
   /*color: #999999;*/
 }
 
@@ -11679,3 +11681,11 @@ footer .btn {
 /*.row .genres-vis1 {
   height: 500px;
 }*/
+
+
+.introCustom {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+
+}

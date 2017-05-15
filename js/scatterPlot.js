@@ -10,7 +10,7 @@ var scatPlotConfig = {
 var isCurrency = {
   "gross": true,
   "profit": true,
-  "ROI": true,
+  // "ROI": true,
   "budget": true
 }
 
@@ -29,7 +29,6 @@ var mouseOverLabel = {
   "numCriticsForReviews": "# Critics For Reviews",
   "movieFBLikes": "# Movie FB Likes",
   "castMemberFBLikes": "# Cast Member FB Likes",
-
 }
 
 var scatLabelSymbol = {
@@ -189,7 +188,7 @@ function drawScatterPlot(pairX,pairY) {
   dotGroup.selectAll(".scatDot")
      .data(scatData)
      .enter()
-     .append("circle")     
+     .append("circle")
      .attr("class", function(d, i) {
          return "scatDot " + d.id;
      })
@@ -207,55 +206,18 @@ function drawScatterPlot(pairX,pairY) {
 
       return scatMouseOut(this, d, pairX, pairY);
      })
-
-
-
-
-
-
-
-
 }
-
 
 
 function scatMouseOver(elem, d, pairX, pairY){
 
-  // console.log(d, pairX, pairY);
-
   d3.select(elem).classed("scatDot active", true);
-
-
-  // d.imdbScore
-  // d.movieTitle
-  // d.actor1
-  // d.actor2
-  // d.actor3
-  // d.director
-  // scatLabelSymbol OR isCurrency << use to check the symbol
-
-  // NOTE: pairing variable need only show one time!
-
-  // NOTE: check currency
-
-  // return isCurrency[pairX] != undefined
-  //   ? formatNumAbbr(d)
-  //   : d3.format(".2s")(d)
 
   var content = "<b>Movie: </b>" + d.movieTitle +
                 "<br><b>IMDb Score: </b>" + d.imdbScore;
 
   // // check if both varible are actors or directors
   if(isDirectorOrActor[pairX] && isDirectorOrActor[pairY]){
-
-    // "directorFBLikes": "Director FB Likes",
-    // "actor1FBLikes": "Actor1 FB Likes: ",
-    // "actor2FBLikes": "Actor2 FB Likes: ",
-    // "actor3FBLikes": "Actor3 FB Likes: ",
-    // "directorFBLikes": "Director: ",
-    // "actor1FBLikes": "Actor1: ",
-    // "actor2FBLikes": "Actor2: ",
-    // "actor3FBLikes": "Actor3: ",
 
     // at least one actor
     content += "<br><b>" + isDirectorOrActor[pairX] + ": </b>" + d[convertToGetDirectorOrActorName[pairX]] +
@@ -266,7 +228,6 @@ function scatMouseOver(elem, d, pairX, pairY){
       content += "<br><b>" + isDirectorOrActor[pairY] + ": </b>" + d[convertToGetDirectorOrActorName[pairY]] +
                  "<br><b>" + mouseOverLabel[pairY] + ": </b>" + d[pairY];
     }
-
   }
   // add either actor name
   else if(isDirectorOrActor[pairX]){
@@ -298,7 +259,6 @@ function scatMouseOver(elem, d, pairX, pairY){
   else if(pairX == "imdbScore" || pairY == "imdbScore") {
     var tmp = pairX;
     tmp = tmp == "imdbScore" ? pairY: pairX;
-    console.log(tmp);
     content += "<br><b>" + mouseOverLabel[tmp] + ": </b>" + d[tmp];
   }
   else {
@@ -315,10 +275,6 @@ function scatMouseOut(elem, d, pairX, pairY){
   d3.select(elem).classed("scatDot", true);
   tip(elem, "myTooltip", "myTooltipActive",  false, "");
 }
-
-
-
-
 
 function scatterPlotConvert(d){
 
@@ -343,10 +299,5 @@ function scatterPlotConvert(d){
   scatData.push(d);
   return d;
 }
-
-
-
-
-
 
 setupScatData();

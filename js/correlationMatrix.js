@@ -250,7 +250,6 @@ function drawCorrelationMatrix(){
         d3.select("#r_coefficient")
         .selectAll("*").remove();
 
-
         // hover on details effect
         tip(this, "myTooltip", "myTooltipActive", false , "");
 

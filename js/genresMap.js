@@ -5,7 +5,6 @@ var center,
     // stroke width
     sw = 2;
 
-
 var genresMapConfig = {
   h: 500,
   w: 500,

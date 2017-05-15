@@ -26,7 +26,6 @@ var svg_2 = div
     .attr("height", genresBubbleConfig.h-genresBubbleConfig.bot);
 
 
-
 // set diameter
 // use for zoom to reveal movies within that circle, maybe next time..
 var diameter = +svg_2.attr("width")/2;
@@ -172,8 +171,6 @@ function drawBubble(genreData, availableCountries, selection){
      .style("font-weight", "bolder")
      .style("font-size", 10)
      .style("text-anchor", "middle");
-
-
 
 
 }
