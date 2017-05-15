@@ -1,3 +1,6 @@
+
+
+
 var network1Config = {
   w: 600,
   h: 650,
@@ -34,6 +37,58 @@ var layout = d3.forceSimulation()
 
 // NOTE: need to stop this layout first!
 layout.stop();
+
+var labelDiv = d3.select("body")
+    .select("#networkCircleLabel");
+
+var circleLabelColor = {
+  "Movie": "#fdcdac",
+  "Director": "#cbd5e8",
+  "Actor": "#b3e2cd",
+}
+
+var circleLabel = labelDiv.append("svg")
+  .attr("height", 20)
+  .attr("width", 300)
+  .attr("transform", translate(10,0))
+  .selectAll(".circleLabel")
+  .data(["Movie", "Director", "Actor"])
+  .enter();
+
+  circleLabel.append("circle")
+  .attr("class", circleLabel)
+  .attr("cx", function(d,i) {return i*100})
+  .attr("cy", 10)
+  .attr("r", 7)
+  .style("fill", function(d){
+    return circleLabelColor[d];
+  });
+
+  circleLabel.append("text")
+  .text(function(d){
+    return d;
+  })
+  .attr("x", function(d,i) {return i*110})
+  .attr("dx", function(d,i){
+    return d == "Movie" ? 15
+      : d == "Director" ? 8 : -5;
+  })
+  .attr("y", 15)
+  .style("font-weight", 500)
+  .style("font-family", "Roboto");
+
+
+  // , function(d){
+  //   return d;
+  // })
+  // .attr("x", function(d,i){
+  //   return i*25;
+  // })
+
+
+
+
+
 
 var div = d3.select("body")
     .select("#network1Container");
