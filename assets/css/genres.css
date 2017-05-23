@@ -1,0 +1,152 @@
+.sankeyNode rect {
+    cursor: move;
+    fill-opacity: 0.9;
+    shape-rendering: crispEdges;
+  }
+
+.sankeyNode text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 400;
+  stroke: "black";
+}
+
+.sankeyLink {
+  fill: none;
+  stroke: black;
+  stroke-opacity: .1;
+}
+
+.sankeyLink:hover {
+  stroke-opacity: .5;
+}
+
+#label1 {
+  font-size: 15px;
+  margin-left: 30px;
+  font-weight: 600;
+  stroke: "black";
+}
+
+#label2 {
+  font-size: 15px;
+  margin-left: -5px;
+  font-weight: 600;
+  stroke: "black";
+}
+
+#label3 {
+  font-size: 15px;
+  font-weight: 600;
+  stroke: "black";
+}
+
+
+/*slider css */
+input[type='range'] {
+		-webkit-appearance: none !important;
+		-webkit-border-radius: 5px;
+		background-color: #9c27b0;
+		height: 5px;
+		width: 440px;
+		margin: 20px;
+    display: inline-block;
+	}
+
+	input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none !important;
+		-webkit-border-radius: 25px;
+		background-color: white;
+		border: 1px solid #000;
+		height: 15px;
+		width: 15px;
+    margin-top: 8px;
+    display: inline-block;
+	}
+
+
+.txLegendLabel {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.tyLegendLabel {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.dot {
+  opacity: 0.8;
+  stroke: black;
+  stroke-width: 1;
+  stroke-opacity: 0.8;
+  r: 7;
+}
+
+.dot.active {
+  stroke: black;
+  stroke-width: 3;
+  stroke-opacity: 4;
+  r: 10;
+}
+
+
+.slideButtonInline {
+  margin-left: 50px;
+  display: inline-block;
+}
+
+#slider{
+  margin-left: 10px;
+  margin-top: -20px;
+  font-size: 20px;
+}
+
+.playBtn {
+  margin-left: 200px;
+  margin-top: -20px;
+}
+
+.dateText {
+  margin-left: 250px;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+
+}
+
+/*.axis--x text {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}*/
+
+.barLabel {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/*.bar.active {
+
+}*/
+
+.axis--x path {
+  stroke: black;
+}
+
+.axis--y path {
+  stroke: black;
+}
+
+/* hide axis--y tick line */
+.axis--y .tick line {
+  /*visibility: hidden;*/
+}
+
+/* x tick line */
+.axis--x .tick line {
+  stroke: black;
+}

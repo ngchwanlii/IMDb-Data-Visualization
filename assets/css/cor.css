@@ -1,0 +1,145 @@
+/* Correlation Matrix css */
+.corLabel {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+#correlationMatrixContainer {
+  margin-top: 0px;
+}
+
+
+/* Scatterplot css */
+.scatDot {
+  opacity: 1;
+  fill: #7A99AC;
+  stroke: black;
+  stroke-opacity: 0.5;
+}
+
+.scatDot.active {
+  fill: red;
+  stroke-opacity: 1;
+  r: 5;
+}
+
+/* director  bubble circle class*/
+.dirBubble {
+  opacity: 1;
+  stroke: black;
+  stroke-opacity: 0.5;
+  cursor: pointer;
+}
+
+.dirBubble.active {
+  stroke: black;
+  stroke-width: 4;
+  stroke-opacity: 1;
+}
+
+/* actor  bubble circle class*/
+.actBubble {
+  opacity: 1;
+  stroke: black;
+  stroke-opacity: 0.5;
+  cursor: pointer;
+}
+
+.actBubble.active {
+  stroke: black;
+  stroke-width: 4;
+  stroke-opacity: 1;
+}
+
+#r_coefficient {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+#directorBubbleChart {
+  margin-top: 20px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+/* director x,y label */
+.dirXLabel {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.dirYLabel {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/* actor x,y label */
+.actXLabel {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.actYLabel {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/*director bubble circle legend*/
+.bubbleCircleLegend {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/*director bubble line legend*/
+.bubbleLineLegend {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/*director bubble warpper */
+.bubbleWrapper {
+  fill: none;
+  pointer-events: all;
+}
+
+/*hide bubble legend tick line*/
+#bubbleLineLegend .tick line{
+  visibility:hidden;
+}
+
+
+
+/*actor bubble circle legend*/
+.actBubbleCircleLegend {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/*director bubble line legend*/
+.actBubbleLineLegend {
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/*director bubble warpper */
+.actBubbleWrapper {
+  fill: none;
+  pointer-events: all;
+}
+
+/*hide bubble legend tick line*/
+#actBubbleLineLegend .tick line{
+  visibility:hidden;
+}

@@ -1,0 +1,11 @@
+movieTitle,genres,movieIMDbLink,gross,budget,imdbScore,profit,ROI
+Paranormal Activity,Horror,http://www.imdb.com/title/tt1179904/?ref_=fn_tt_tt_1,107917283,15000,6.3,107902283,719348.5533333333
+Tarnation,Biography|Documentary,http://www.imdb.com/title/tt0390538/?ref_=fn_tt_tt_1,592014,218,7.2,591796,271466.05504587153
+The Blair Witch Project,Horror,http://www.imdb.com/title/tt0185937/?ref_=fn_tt_tt_1,140530114,60000,6.4,140470114,234116.85666666666
+The Brothers McMullen,Comedy|Drama|Romance,http://www.imdb.com/title/tt0112585/?ref_=fn_tt_tt_1,10246600,25000,6.6,10221600,40886.399999999994
+The Texas Chain Saw Massacre,Horror|Thriller,http://www.imdb.com/title/tt0072271/?ref_=fn_tt_tt_1,30859000,83532,7.5,30775468,36842.72853517215
+El Mariachi,Action|Crime|Drama|Romance|Thriller,http://www.imdb.com/title/tt0104815/?ref_=fn_tt_tt_1,2040920,7000,6.9,2033920,29056
+The Gallows,Horror|Thriller,http://www.imdb.com/title/tt2309260/?ref_=fn_tt_tt_1,22757819,100000,4.2,22657819,22657.819
+Super Size Me,Comedy|Documentary|Drama,http://www.imdb.com/title/tt0390521/?ref_=fn_tt_tt_1,11529368,65000,7.3,11464368,17637.48923076923
+Halloween,Horror|Thriller,http://www.imdb.com/title/tt0077651/?ref_=fn_tt_tt_1,47000000,300000,7.9,46700000,15566.666666666666
+American Graffiti,Comedy|Drama|Music,http://www.imdb.com/title/tt0069704/?ref_=fn_tt_tt_1,115000000,777000,7.5,114223000,14700.514800514802

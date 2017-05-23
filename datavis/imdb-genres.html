@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="aspple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Jay Ng - Portfolio Page</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <!-- Bootstrap core CSS     -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/material-kit.css?v=1.1.0" rel="stylesheet" />
+  <!--  Material Dashboard CSS    -->
+  <link href="../assets/css/material-dashboard.css" rel="stylesheet" />
+  <!--  CSS for Demo Purpose, don't include it in your project     -->
+  <link href="../assets/css/demo.css" rel="stylesheet" />
+  <!-- CSS for vertical nav dot -->
+  <link href="../assets/css/vertical-nav.css" rel="stylesheet" />
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <!-- sankey diagram -->
+  <script src="../js/sankey.js"></script>
+  <!-- d3 sankey lib by MikeBostock -->
+  <!-- <script src="https://unpkg.com/d3-sankey@0"></script> -->
+  <!-- slider  -->
+  <link href="../assets/css/nouislider.min.css" rel="stylesheet">
+  <script src="../js/tooltip.js"></script>
+  <script src="../js/util.js"></script>
+  <link href="../assets/css/genres.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div id="myTooltip" class="myTooltip"></div>
+  <div class="wrapper">
+    <!-- sidebar -->
+    <div class="sidebar" data-active-color="purple" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
+        Tip 2: you can also add an image using data-image tag
+        Tip 3: you can change the color of the sidebar with data-background-color="white | black"
+    -->
+      <div class="logo">
+        <a href="../index.html" class="simple-text">
+                    Jay Ng
+        </a>
+      </div>
+      <div class="logo logo-mini">
+        <a href="../index.html" class="simple-text">
+                    JN
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <a href="../index.html" class="simple-text">
+            <div class="photo">
+              <img src="../assets/img/faces/small_ngchwanlii.png" />
+            </div>
+          </a>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="../index.html">
+              <i class="material-icons">face</i>
+              <p style="font-weight: bolder;font-size:18px;">About</p>
+            </a>
+          </li>
+          <li>
+            <a href="../web/portfolio.html">
+              <i class="material-icons">dashboard</i>
+              <p style="font-weight: bolder;font-size:18px;">Portfolio</p>
+            </a>
+          </li>
+          <li class="active">
+            <a href="./imdb-intro.html">
+              <!-- <i class="material-icons">widgets</i> -->
+              <i class="material-icons">&#xE838;</i>
+              <p style="font-weight: bolder;font-size:18px;">IMDb Visualization</p>
+            </a>
+          </li>
+        <li>
+          <a href="../fractal_movie/fractal_movie.html">
+            <!-- <i class="material-icons">movie</i> -->
+            <i class="material-icons">&#xE838;</i>
+            <p style="font-weight: bolder;font-size:18px;">Fractal Movie</p>
+          </a>
+        </li>
+        <li>
+          <a href="../web/portfolio_software_development.html">
+            <!-- <i class="material-icons">movie</i> -->
+            <i class="material-icons">&#xE838;</i>
+            <p style="font-weight: bolder;font-size:18px;">Software Apps</p>
+          </a>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end of sidebar -->
+
+    <!-- main panel -->
+    <div class="main-panel">
+      <!-- navigation bar -->
+      <nav class="navbar navbar-black navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-minimize">
+            <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon">
+                              <i class="material-icons visible-on-sidebar-regular">more_vert</i>
+                              <i class="material-icons visible-on-sidebar-mini">view_list</i>
+                          </button>
+          </div>
+          <!-- burger menu -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+            <a class="navbar-brand" href="">
+                                Menu
+                          </a>
+          </div>
+          <!-- end of burger menu -->
+          <!-- right side navigation pills -->
+          <div class="collapse navbar-collapse">
+            <a href="http://imdb.com" class="imdb-logo">IMDb</a>
+            <ul class="nav nav-pills navbar-right">
+              <li onclick='window.location.href="../datavis/imdb-intro.html"'>
+                <a href="#intro" data-toggle="tab">Intro</a>
+              </li>
+              <li class="active">
+                <a href="#genres" data-toggle="tab">Genres</a>
+              </li>
+              <li onclick='window.location.href="../datavis/imdb-statistics.html"'>
+                <a href="#statistics" data-toggle="tab">Statistics</a>
+              </li>
+              <li onclick='window.location.href="../datavis/imdb-networks.html"'>
+                <a href="#network" data-toggle="tab">Network</a>
+              </li>
+            </ul>
+          </div>
+          <!-- end of right side navigation pills -->
+        </div>
+      </nav>
+      <!-- end of navigation bar -->
+
+      <!-- graph put inside here  -->
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- all vis put inside this row  -->
+          <div class="row">
+            <!-- geo+bubble vis 1 -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-icon" data-background-color="black">
+                  <i class="material-icons">language</i>
+                </div>
+                <div class="card-content genres-vis1-h1" id="genres-vis1">
+                  <h2 class="card-title" style="margin-top:-15px;">Movie Genre Rating by Country</h2>
+                  <div class="row genres-vis1-h2">
+                    <div class="col-md-5">
+                      <div class="map" style="height:500px">
+                        <div id="genresBubbleContainer" style="background-color: transparent; height:500px; border-radius: 6px;margin-top: 15px;">
+                          <div id="countryText" style="margin-left: 70px; font-size: 20px"></div>
+                          <!-- genresBubbleChart goes here -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                      <div class="map" style="height:500px">
+                        <div id="genresMapContainer" class="jvectormap-container" style="background-color: transparent">
+                          <!-- genresMap goes here -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-rotate">
+              <div class="front">
+                <div class="card-content">
+                  <h5 class="category-social text-success">
+                    <i class="fa fa-newspaper-o"></i> INSIGHT ONE - Movie Genres  by Country
+                  </h5>
+
+                  <h5 class="card-title">Description</h5>
+                  <p class="card-description myCustom">
+                    The <b>Geographic</b> data visualization above shows the top movie genres based on highest IMDb score either
+                    across the global or on that specific country based on user interaction. The <b>Circle packing</b> data visualization
+                    on the left shows all the movie genres based on that specific country user clicked or global by default. This size of
+                    the bubble shows the average IMDb score of that genre in that country. The grey color represent the
+                    missing data in IMDb dataset, but it is included here in the map as an overview of the whole world map. The reason that
+                    it has missing data is because I'm combining Mike Bostock world-map.json files with the IMDb 5000 Kaggle Dataset. So
+                    some of the country that are not listed in IMDb dataset is represented as light gray in the map.
+                    The color coding here is following the this link
+                    <a href="https://claragiacaloneportfolio.wordpress.com/2015/01/09/imdb-website/"><b><i>movie genres color</i></b></a>
+                    as reference, which in my opinion this color really looks great in the map!
+                  </p>
+                  <br>
+                  <h5 class="card-title">Interactivity </h5>
+                  <li>
+                    <u>Zoom: </u> You can zoom on the map to explore the country you want. This geomap may seems small at first sight but my
+                    intention is to show the whole world map side by side with the circle packing data visualization so we can know extra information
+                    . That's why the zooming features is added here for you to explore the "tiny" country. When zooming, you can click on the country to
+                    zoom into that area, and either click on the same country or white background to go back to default view.
+                  </li>
+                  <br>
+                  <h5 class="card-title">How Top Genres is picked? </h5>
+                  <p class="card-description myCustom">
+                    The top genres is calculated by taking the average IMDb score of each genre and compared to all other genres based on that specific country.
+                    The same algorithm is used for global world. In some case that there are same IMDb score of some genres, in that case, the top
+                    genres is picked based on the higher number of voted users for that genre.
+                  </p>
+                  <br>
+                  <h5 class="card-title">Interesting Fact</h5>
+                  <p class="card-description myCustom">
+                    When I explore the data visualization based on USA, I found out that movie genres - <b>Film-Noir</b> has
+                    highest average IMDb score even though there are only total of 6 movie based on this genre, which is interesting. The other
+                    genre have pretty close average IMdb score in the range of 5.8 ~ 7.5 <b>except that there are two genres Reality-TV and Game-Show</b>
+                    have really low average IMDb score which are 2.9. Does this mean that American don't like Reality-TV or Game-Show type movie?
+                    In overall, the IMDb score really depend on users preferences on which movie genres they like and how much users are voting for their
+                    favorite movie. And also <b> Please notice that <u>Horror movie genre</u>  has only 5.8 in Average IMDb score, but I found some interesting fact
+                    about Horror movie genres on next Sankey data visualization.
+                    </b>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- sankey  row -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-icon" data-background-color="black">
+                  <i class="material-icons">language</i>
+                </div>
+                <div class="card-content genres-vis2" id="genres-vis2">
+
+                  <h2 class="card-title" style="margin-top:-15px">Top 10 Movie Genres' Flows </h2>
+                  <!-- user selection -->
+                  <div style="width: 200px; margin-left: 420px">
+                    <select id="sankeyDropdownMenu" class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
+                        <option value="0" selected> by Gross Earning ($)</option>
+                        <option value="1">by Profit ($)</option>
+                        <option value="2">by ROI (%)</option>
+                      </select>
+                  </div>
+
+                  <div class="tab-content tab-space">
+                    <!-- <span id="label1" class="col-md-1" style="width: 33%; margin-left: 30px">Movies</span> -->
+                    <span id="label1" class="col-md-5">Movies</span>
+                    <span id="label2" class="col-md-5">($/%)</span>
+                    <span id="label3">Genres</span>
+
+                  </div>
+                  <div id="genresSankeyContainer" class="map">
+                    <!-- sankey diagram here -->
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-rotate">
+              <div class="front">
+                <div class="card-content">
+                  <h5 class="category-social text-success">
+                    <i class="fa fa-newspaper-o"></i> INSIGHT TWO - Top 10 Movie Genres' Flows
+                  </h5>
+
+                  <h5 class="card-title">Description & Findings</h5>
+                  <p class="card-description myCustom">
+                    The <b>Sankey</b> data visualization above shows the top 10 movie genres flow of all time based on
+                    <b>gross earning, profit, or return of investment (ROI)</b> which users can click on the middle button to filter
+                    the option. <b>As I mention something about Horror genres on previous data visualization, please <u>follow me</u>
+                    to <u>click on the button</u> and select <u>ROI</u> for filtering</b>.
+                    As you can see that movie with most ROI are in <b>Horror genres - </b><b><u>The Paranormal Activity</u></b>
+                    with <b>719348.55% of ROI which is really scary!!</b> These data also reveal a good information for investor who
+                    would like to invest in movie industry, even though the Horror movie genres has a median IMDb score, their ROI
+                    is awesome!
+                  </p>
+                  <br>
+                  <h5 class="card-title">Interactivity </h5>
+                  <li>
+                    <u>Drag: </u> You can drag the node in vertical direction to reposition the node. Feel free to play around with it.
+                  </li>
+                  <li>
+                    <u>Click: </u> You can <b>click on the movie genres node to see the colored flows based on that genre</b>
+                  </li>
+                  <li>
+                    <u>Highlight: </u> You can also highlight the sankey flow to see the flow details.
+                  </li>
+                </div>
+              </div>
+            </div>
+
+            <!-- time series on # genres and average genres earning -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-icon" data-background-color="black">
+                  <i class="material-icons">language</i>
+                </div>
+                <div class="card-content genres-vis1-h1" id="genres-vis1">
+                  <h2 class="card-title" style="margin-top:-15px;">Movies' Genre Analysis</h2>
+                  <i><h4 class="card-title" style="margin-top:-15px; margin-left: 80px">Average IMDb Score & Profit (2000-2016)</h4></i>
+
+                  <div class="row genres-vis1-h2">
+                    <div class="col-md-5">
+                      <div class="map" style="height:580px">
+                        <div class="slideButtonInline">
+                          <button id="playButton" class="btn btn-primary btn-sm playBtn">Play</button>
+                          <input id="slider" type="range" min="2000" max="2016" value="2000" step="1" />
+                        </div>
+                        <span class="dateText" id="range">2000</span>
+                        <div id="genresTimeSeriesContainer" style="display: inline-block; background-color: transparent; height:500px; border-radius: 6px;margin-top: 15px;">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- genres animated Bar chart goes here -->
+                    <div class="col-md-6 col-md-offset-1">
+                      <div class="map" style="height:580px">
+                        <!-- class="jvectormap-container"  -->
+                        <div id="genresBarChartContainer" style="display: inline-block; background-color: transparent; height: 550px; border-radius: 6px;margin-top: 15px;">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-rotate">
+              <div class="front">
+                <div class="card-content">
+                  <h5 class="category-social text-success">
+                    <i class="fa fa-newspaper-o"></i> INSIGHT THREE - Movies' Genre Analysis Average IMDb Score & Profit (2000-2016)
+                  </h5>
+                  <h5 class="card-title">Description & Findings</h5>
+                  <p class="card-description myCustom">
+                    The <b>Time Series Scatterplot</b> data visualization above reveal how the count of each movie genre' and average IMDb score
+                    change on each specific year in (2000~2016). In this data visualization, it is interesting to find out <b>most of the genres has the average
+                      IMDb score fitting in the range of 5~8; </b> while <b>Drama </b>movie genre has most of the number of movie count of all time </b> however it
+                      <b>drop significantly in 2016</b>. In fact, all the movie genres number count drop significantly in 2016, so what happen in 2016? I'm doubt
+                      that it's the dataset range causes this limitation. <b>The Two Sided Bar Chart </b> data visualiztion on the right shows the average profit on each
+                      genre based on specific year. It is interesting to find out the Animation Movie Genres is the best average profitable movie <b>($93.8M) </b>in 2016, while the
+                      The Western Movie Genres type has a bad year of 2016 with negative ($-23.5M) average profit movie. Besides that, I've observed that history type of movie genre
+                      has always making negative profit in the period of 2000 ~ 2011, however, the history movie become significantly profitable in
+                      the next year (2012) and these trend goes with following year until 2016, which it begin to loss profit again. The history genres movies has it most
+                      average profit at peaks compared to other genres in 2014, this can be explained that in 2014,
+                      there's an Oscar winning movie - <b><i>The American Sniper</i></b> has been released. Which in my opinion, it does drive the average profit of the
+                      movie in history genres because this is a really good movie.
+                    </b>
+                  </p>
+                  <br>
+                  <h5 class="card-title">Interactivity </h5>
+                  <li>
+                    <u>Play Button: </u> You can click on the play button to see how the movie genres' number of count, average IMDb score and average profit on each
+                    specific year.
+                  </li>
+                  <li>
+                    <u>Slider: </u> You can use the slider to filter the data on specific year and explore some interesting fact.
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- footer area -->
+          <footer class="footer">
+            <div class="container-fluid">
+              <div class="social-line social-line-white text-center">
+    	        		<div class="container">
+    	        			<div class="row">
+                      <a href="https://www.linkedin.com/in/ngchwanlii/">
+                        <button class="btn btn-just-icon btn-round btn-linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </button>
+                      </a>
+                      <a href="https://github.com/ngchwanlii">
+                        <button class="btn btn-just-icon btn-round btn-github">
+                            <i class="fa fa-github"></i>
+                        </button>
+                      </a>
+                      <a href="https://twitter.com/ngchwanlii">
+                        <button class="btn btn-just-icon btn-round btn-twitter">
+                            <i class="fa fa-twitter"></i>
+                        </button>
+                      </a>
+                      <a href="https://plus.google.com/u/0/116480728305685079134">
+                        <button class="btn btn-just-icon btn-round btn-google">
+                            <i class="fa fa-google"> </i>
+                        </button>
+                      </a>
+                      <!-- <a href="">
+                        <button class="btn btn-just-icon btn-round btn-facebook">
+
+                            <i class="fa fa-facebook"> </i>
+                        </button>
+                      </a> -->
+    	        			</div>
+    	        		</div>
+    	        	</div>
+            </div>
+          </footer>
+          <!-- end of footer area -->
+        </div>
+        <!-- end of main panel -->
+      </div>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<script src="../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/js/material.min.js" type="text/javascript"></script>
+<script src="../assets/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery.bootstrap-wizard.js"></script>
+<script src="../assets/js/bootstrap-notify.js"></script>
+<script src="../assets/js/jquery-jvectormap.js"></script>
+<script src="../assets/js/nouislider.min.js"></script>
+<script src="../assets/js/jquery.select-bootstrap.js"></script>
+<script src="../assets/js/material-dashboard.js"></script>
+
+<!-- data vis script -->
+<script src="../js/genresMap.js"></script>
+<script src="../js/genresBubble.js"></script>
+<script src="../js/genresSankey.js"></script>
+<script src="../js/genresTimeSeries.js"></script>
+
+
+
+</html>

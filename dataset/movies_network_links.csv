@@ -1,0 +1,400 @@
+source,target,id,weight
+The Shawshank Redemption,Frank Darabont,0,1
+The Shawshank Redemption,Morgan Freeman,1,1
+The Shawshank Redemption,Jeffrey DeMunn,2,1
+The Shawshank Redemption,Bob Gunton,3,1
+The Godfather,Francis Ford Coppola,4,1
+The Godfather,Al Pacino,5,1
+The Godfather,Marlon Brando,6,1
+The Godfather,Robert Duvall,7,1
+Kickboxer: Vengeance,John Stockwell,8,1
+Kickboxer: Vengeance,Matthew Ziff,9,1
+Kickboxer: Vengeance,T.J. Storm,10,1
+Kickboxer: Vengeance,Sam Medina,11,1
+The Dark Knight,Christopher Nolan,12,1
+The Dark Knight,Christian Bale,13,1
+The Dark Knight,Heath Ledger,14,1
+The Dark Knight,Morgan Freeman,15,1
+The Godfather: Part II,Francis Ford Coppola,16,1
+The Godfather: Part II,Robert De Niro,17,1
+The Godfather: Part II,Al Pacino,18,1
+The Godfather: Part II,Robert Duvall,19,1
+The Lord of the Rings: The Return of the King,Peter Jackson,20,1
+The Lord of the Rings: The Return of the King,Orlando Bloom,21,1
+The Lord of the Rings: The Return of the King,Billy Boyd,22,1
+The Lord of the Rings: The Return of the King,Bernard Hill,23,1
+Schindler's List,Steven Spielberg,24,1
+Schindler's List,Liam Neeson,25,1
+Schindler's List,Embeth Davidtz,26,1
+Schindler's List,Caroline Goodall,27,1
+Pulp Fiction,Quentin Tarantino,28,1
+Pulp Fiction,Bruce Willis,29,1
+Pulp Fiction,Eric Stoltz,30,1
+Pulp Fiction,Phil LaMarr,31,1
+The Good, the Bad and the Ugly,32,1
+The Good,Sergio Leone,33,1
+The Good,Clint Eastwood,34,1
+The Good,Luigi Pistilli,35,1
+The Good,Enzo Petito,36,1
+12 Angry Men,Sidney Lumet,37,1
+12 Angry Men,Jack Warden,38,1
+12 Angry Men,Lee J. Cobb,39,1
+12 Angry Men,John Fiedler,40,1
+Inception,Christopher Nolan,41,1
+Inception,Leonardo DiCaprio,42,1
+Inception,Tom Hardy,43,1
+Inception,Joseph Gordon-Levitt,44,1
+The Lord of the Rings: The Fellowship of the Ring,Peter Jackson,45,1
+The Lord of the Rings: The Fellowship of the Ring,Christopher Lee,46,1
+The Lord of the Rings: The Fellowship of the Ring,Orlando Bloom,47,1
+The Lord of the Rings: The Fellowship of the Ring,Billy Boyd,48,1
+Fight Club,David Fincher,49,1
+Fight Club,Brad Pitt,50,1
+Fight Club,Meat Loaf,51,1
+Fight Club,Eugenie Bondurant,52,1
+Forrest Gump,Robert Zemeckis,53,1
+Forrest Gump,Tom Hanks,54,1
+Forrest Gump,Siobhan Fallon Hogan,55,1
+Forrest Gump,Sam Anderson,56,1
+Star Wars: Episode V - The Empire Strikes Back,Irvin Kershner,57,1
+Star Wars: Episode V - The Empire Strikes Back,Harrison Ford,58,1
+Star Wars: Episode V - The Empire Strikes Back,Kenny Baker,59,1
+Star Wars: Episode V - The Empire Strikes Back,Anthony Daniels,60,1
+The Lord of the Rings: The Two Towers,Peter Jackson,61,1
+The Lord of the Rings: The Two Towers,Christopher Lee,62,1
+The Lord of the Rings: The Two Towers,Orlando Bloom,63,1
+The Lord of the Rings: The Two Towers,Billy Boyd,64,1
+The Matrix,Lana Wachowski,65,1
+The Matrix,Keanu Reeves,66,1
+The Matrix,Marcus Chong,67,1
+The Matrix,Gloria Foster,68,1
+Goodfellas,Martin Scorsese,69,1
+Goodfellas,Robert De Niro,70,1
+Goodfellas,Mike Starr,71,1
+Goodfellas,Paul Sorvino,72,1
+Star Wars: Episode IV - A New Hope,George Lucas,73,1
+Star Wars: Episode IV - A New Hope,Harrison Ford,74,1
+Star Wars: Episode IV - A New Hope,Peter Cushing,75,1
+Star Wars: Episode IV - A New Hope,Kenny Baker,76,1
+One Flew Over the Cuckoo's Nest,Milos Forman,77,1
+One Flew Over the Cuckoo's Nest,Scatman Crothers,78,1
+One Flew Over the Cuckoo's Nest,Michael Berryman,79,1
+One Flew Over the Cuckoo's Nest,Louise Fletcher,80,1
+City of God,Fernando Meirelles,81,1
+City of God,Alice Braga,82,1
+City of God,Seu Jorge,83,1
+City of God,Alexandre Rodrigues,84,1
+A Beginner's Guide to Snuff,Mitchell Altieri,85,1
+A Beginner's Guide to Snuff,Kimberley Crossman,86,1
+A Beginner's Guide to Snuff,Luke Edwards,87,1
+A Beginner's Guide to Snuff,Bree Williamson,88,1
+Queen of the Mountains,Sadyk Sher-Niyaz,89,1
+Queen of the Mountains,Elina Abai Kyzy,90,1
+Queen of the Mountains,Aziz Muradillayev,91,1
+Queen of the Mountains,Mirlan Abdulayev,92,1
+Seven Samurai,Akira Kurosawa,93,1
+Seven Samurai,Takashi Shimura,94,1
+Seven Samurai,Minoru Chiaki,95,1
+Seven Samurai,Kamatari Fujiwara,96,1
+Butterfly Girl,Cary Bell,97,1
+Butterfly Girl,Abigail Evans,98,1
+Butterfly Girl,Stacie Evans,99,1
+Butterfly Girl,Emily Gorell,100,1
+Interstellar,Christopher Nolan,101,1
+Interstellar,Matthew McConaughey,102,1
+Interstellar,Anne Hathaway,103,1
+Interstellar,Mackenzie Foy,104,1
+Saving Private Ryan,Steven Spielberg,105,1
+Saving Private Ryan,Tom Hanks,106,1
+Saving Private Ryan,Vin Diesel,107,1
+Saving Private Ryan,Matt Damon,108,1
+Se7en,David Fincher,109,1
+Se7en,Morgan Freeman,110,1
+Se7en,Brad Pitt,111,1
+Se7en,Reg E. Cathey,112,1
+The Silence of the Lambs,Jonathan Demme,113,1
+The Silence of the Lambs,Anthony Hopkins,114,1
+The Silence of the Lambs,Scott Glenn,115,1
+The Silence of the Lambs,Anthony Heald,116,1
+Spirited Away,Hayao Miyazaki,117,1
+Spirited Away,Bunta Sugawara,118,1
+Spirited Away,RyÌÎÌönosuke Kamiki,119,1
+Spirited Away,Miyu Irino,120,1
+American History X,Tony Kaye,121,1
+American History X,Ethan Suplee,122,1
+American History X,Beverly D'Angelo,123,1
+American History X,Stacy Keach,124,1
+The Usual Suspects,Bryan Singer,125,1
+The Usual Suspects,Kevin Spacey,126,1
+The Usual Suspects,Chazz Palminteri,127,1
+The Usual Suspects,Kevin Pollak,128,1
+Once Upon a Time in the West,Sergio Leone,129,1
+Once Upon a Time in the West,Claudia Cardinale,130,1
+Once Upon a Time in the West,Woody Strode,131,1
+Once Upon a Time in the West,Jack Elam,132,1
+Running Forever,Mike Mayhall,133,1
+Running Forever,David Raizor,134,1
+Running Forever,Cody Howard,135,1
+Running Forever,Martin Kove,136,1
+It's a Wonderful Life,Frank Capra,137,1
+It's a Wonderful Life,Donna Reed,138,1
+It's a Wonderful Life,Lionel Barrymore,139,1
+It's a Wonderful Life,Thomas Mitchell,140,1
+Modern Times,Charles Chaplin,141,1
+Modern Times,Paulette Goddard,142,1
+Modern Times,Stanley Blystone,143,1
+Modern Times,Fred Malatesta,144,1
+Casablanca,Michael Curtiz,145,1
+Casablanca,Humphrey Bogart,146,1
+Casablanca,Claude Rains,147,1
+Casablanca,Conrad Veidt,148,1
+The Dark Knight Rises,Christopher Nolan,149,1
+The Dark Knight Rises,Tom Hardy,150,1
+The Dark Knight Rises,Christian Bale,151,1
+The Dark Knight Rises,Joseph Gordon-Levitt,152,1
+Gladiator,Ridley Scott,153,1
+Gladiator,Djimon Hounsou,154,1
+Gladiator,Connie Nielsen,155,1
+Gladiator,Oliver Reed,156,1
+Terminator 2: Judgment Day,James Cameron,157,1
+Terminator 2: Judgment Day,Joe Morton,158,1
+Terminator 2: Judgment Day,Jenette Goldstein,159,1
+Terminator 2: Judgment Day,S. Epatha Merkerson,160,1
+Django Unchained,Quentin Tarantino,161,1
+Django Unchained,Leonardo DiCaprio,162,1
+Django Unchained,Christoph Waltz,163,1
+Django Unchained,Ato Essandoh,164,1
+The Departed,Martin Scorsese,165,1
+The Departed,Leonardo DiCaprio,166,1
+The Departed,Matt Damon,167,1
+The Departed,Ray Winstone,168,1
+The Lion King,Roger Allers,169,1
+The Lion King,Matthew Broderick,170,1
+The Lion King,Nathan Lane,171,1
+The Lion King,Niketa Calame,172,1
+The Green Mile,Frank Darabont,173,1
+The Green Mile,Tom Hanks,174,1
+The Green Mile,Jeffrey DeMunn,175,1
+The Green Mile,Michael Jeter,176,1
+The Prestige,Christopher Nolan,177,1
+The Prestige,Christian Bale,178,1
+The Prestige,Hugh Jackman,179,1
+The Prestige,Scarlett Johansson,180,1
+The Pianist,Roman Polanski,181,1
+The Pianist,Emilia Fox,182,1
+The Pianist,Frank Finlay,183,1
+The Pianist,Ed Stoppard,184,1
+Apocalypse Now,Francis Ford Coppola,185,1
+Apocalypse Now,Harrison Ford,186,1
+Apocalypse Now,Marlon Brando,187,1
+Apocalypse Now,Robert Duvall,188,1
+Raiders of the Lost Ark,Steven Spielberg,189,1
+Raiders of the Lost Ark,Harrison Ford,190,1
+Raiders of the Lost Ark,Karen Allen,191,1
+Raiders of the Lost Ark,William Hootkins,192,1
+Psycho,Alfred Hitchcock,193,1
+Psycho,Janet Leigh,194,1
+Psycho,Vera Miles,195,1
+Psycho,John Gavin,196,1
+Back to the Future,Robert Zemeckis,197,1
+Back to the Future,Lea Thompson,198,1
+Back to the Future,Thomas F. Wilson,199,1
+Back to the Future,J.J. Cohen,200,1
+Alien,Ridley Scott,201,1
+Alien,Tom Skerritt,202,1
+Alien,Yaphet Kotto,203,1
+Alien,Bolaji Badejo,204,1
+Memento,Christopher Nolan,205,1
+Memento,Callum Rennie,206,1
+Memento,Thomas Lennon,207,1
+Memento,Jorja Fox,208,1
+Airlift,Raja Menon,209,1
+Airlift,Nimrat Kaur,210,1
+Airlift,Sameer Ali Khan,211,1
+Airlift,Purab Kohli,212,1
+Samsara,Ron Fricke,213,1
+Samsara,Collin Alfredo St. Dic,214,1
+Samsara,Balinese Tari Legong Dancers,215,1
+Samsara,Puti Sri Candra Dewi,216,1
+Whiplash,Damien Chazelle,217,1
+Whiplash,J.K. Simmons,218,1
+Whiplash,Melissa Benoist,219,1
+Whiplash,Chris Mulkey,220,1
+The Lives of Others,Florian Henckel von Donnersmarck,221,1
+The Lives of Others,Sebastian Koch,222,1
+The Lives of Others,Ulrich MÌÎ_he,223,1
+The Lives of Others,Martina Gedeck,224,1
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,Stanley Kubrick,225,1
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,George C. Scott,226,1
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,Slim Pickens,227,1
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,Keenan Wynn,228,1
+Children of Heaven,Majid Majidi,229,1
+Children of Heaven,Bahare Seddiqi,230,1
+Children of Heaven,Amir Farrokh Hashemian,231,1
+Children of Heaven,Mohammad Amir Naji,232,1
+WALLÌ´ÌÁE,Andrew Stanton,233,1
+WALLÌ´ÌÁE,John Ratzenberger,234,1
+WALLÌ´ÌÁE,Fred Willard,235,1
+WALLÌ´ÌÁE,Jeff Garlin,236,1
+Braveheart,Mel Gibson,237,1
+Braveheart,Mhairi Calvey,238,1
+Braveheart,Patrick McGoohan,239,1
+Braveheart,James Robinson,240,1
+AmÌÎå©lie,Jean-Pierre Jeunet,241,1
+AmÌÎå©lie,Mathieu Kassovitz,242,1
+AmÌÎå©lie,Jamel Debbouze,243,1
+AmÌÎå©lie,Isabelle Nanty,244,1
+Baahubali: The Beginning,S.S. Rajamouli,245,1
+Baahubali: The Beginning,Tamannaah Bhatia,246,1
+Baahubali: The Beginning,Anushka Shetty,247,1
+Baahubali: The Beginning,Prabhas,248,1
+Lion of the Desert,Moustapha Akkad,249,1
+Lion of the Desert,Oliver Reed,250,1
+Lion of the Desert,Rod Steiger,251,1
+Lion of the Desert,John Gielgud,252,1
+Star Wars: Episode VI - Return of the Jedi,Richard Marquand,253,1
+Star Wars: Episode VI - Return of the Jedi,Harrison Ford,254,1
+Star Wars: Episode VI - Return of the Jedi,Ian McDiarmid,255,1
+Star Wars: Episode VI - Return of the Jedi,Kenny Baker,256,1
+Once Upon a Time in America,Sergio Leone,257,1
+Once Upon a Time in America,Robert De Niro,258,1
+Once Upon a Time in America,Burt Young,259,1
+Once Upon a Time in America,Treat Williams,260,1
+Princess Mononoke,Hayao Miyazaki,261,1
+Princess Mononoke,Minnie Driver,262,1
+Princess Mononoke,Jada Pinkett Smith,263,1
+Princess Mononoke,Billy Crudup,264,1
+The Shining,Stanley Kubrick,265,1
+The Shining,Scatman Crothers,266,1
+The Shining,Shelley Duvall,267,1
+The Shining,Joe Turkel,268,1
+Aliens,James Cameron,269,1
+Aliens,Michael Biehn,270,1
+Aliens,Carrie Henn,271,1
+Aliens,Jenette Goldstein,272,1
+American Beauty,Sam Mendes,273,1
+American Beauty,Kevin Spacey,274,1
+American Beauty,Peter Gallagher,275,1
+American Beauty,Ara Celi,276,1
+Lawrence of Arabia,David Lean,277,1
+Lawrence of Arabia,Claude Rains,278,1
+Lawrence of Arabia,JosÌÎå© Ferrer,279,1
+Lawrence of Arabia,Jack Hawkins,280,1
+U2 3D,Catherine Owens,281,1
+U2 3D,Bono,282,1
+U2 3D,The Edge,283,1
+U2 3D,Larry Mullen Jr.,284,1
+Das Boot,Wolfgang Petersen,285,1
+Das Boot,J�� rgen Prochnow,286,1
+Das Boot,Martin Semmelrogge,287,1
+Das Boot,Herbert GrÌÎå_nemeyer,288,1
+Rang De Basanti,Rakeysh Omprakash Mehra,289,1
+Rang De Basanti,Anupam Kher,290,1
+Rang De Basanti,Steven Mackintosh,291,1
+Rang De Basanti,Madhavan,292,1
+Requiem for a Dream,Darren Aronofsky,293,1
+Requiem for a Dream,Ellen Burstyn,294,1
+Requiem for a Dream,Mark Margolis,295,1
+Requiem for a Dream,Louise Lasser,296,1
+Batman: The Dark Knight Returns, Part 2,297,1
+Batman: The Dark Knight Returns,Jay Oliva,298,1
+Batman: The Dark Knight Returns,Michael Emerson,299,1
+Batman: The Dark Knight Returns,Mark Valley,300,1
+Batman: The Dark Knight Returns,Grey Griffin,301,1
+Oldboy,Chan-wook Park,302,1
+Oldboy,Min-sik Choi,303,1
+Oldboy,Ji-tae Yu,304,1
+Oldboy,Hye-jeong Kang,305,1
+To Kill a Mockingbird,Robert Mulligan,306,1
+To Kill a Mockingbird,Robert Duvall,307,1
+To Kill a Mockingbird,Brock Peters,308,1
+To Kill a Mockingbird,William Windom,309,1
+Reservoir Dogs,Quentin Tarantino,310,2
+Reservoir Dogs,Steve Buscemi,312,1
+Reservoir Dogs,Chris Penn,313,1
+A Separation,Asghar Farhadi,314,1
+A Separation,Shahab Hosseini,315,1
+A Separation,Leila Hatami,316,1
+A Separation,Peyman Moaadi,317,1
+The Other Dream Team,Marius A. Markevicius,318,1
+The Other Dream Team,Tommy Sheppard,319,1
+The Other Dream Team,Greg Speirs,320,1
+The Other Dream Team,Mickey Hart,321,1
+A Charlie Brown Christmas,Bill Melendez,322,2
+A Charlie Brown Christmas,Peter Robbins,323,1
+A Charlie Brown Christmas,Christopher Shea,325,1
+Toy Story 3,Lee Unkrich,326,1
+Toy Story 3,Tom Hanks,327,1
+Toy Story 3,John Ratzenberger,328,1
+Toy Story 3,Don Rickles,329,1
+Up,Pete Docter,330,1
+Up,John Ratzenberger,331,1
+Up,Delroy Lindo,332,1
+Up,Jess Harnell,333,1
+Inside Out,Pete Docter,334,1
+Inside Out,Amy Poehler,335,1
+Inside Out,Mindy Kaling,336,1
+Inside Out,Phyllis Smith,337,1
+Batman Begins,Christopher Nolan,338,1
+Batman Begins,Christian Bale,339,1
+Batman Begins,Liam Neeson,340,1
+Batman Begins,Morgan Freeman,341,1
+Inglourious Basterds,Quentin Tarantino,342,1
+Inglourious Basterds,Michael Fassbender,343,1
+Inglourious Basterds,Brad Pitt,344,1
+Inglourious Basterds,Christoph Waltz,345,1
+Indiana Jones and the Last Crusade,Steven Spielberg,346,1
+Indiana Jones and the Last Crusade,Harrison Ford,347,1
+Indiana Jones and the Last Crusade,Julian Glover,348,1
+Indiana Jones and the Last Crusade,Alison Doody,349,1
+L.A. Confidential,Curtis Hanson,350,1
+L.A. Confidential,Kevin Spacey,351,1
+L.A. Confidential,Matt McCoy,352,1
+L.A. Confidential,Paul Guilfoyle,353,1
+Toy Story,John Lasseter,354,1
+Toy Story,Tom Hanks,355,1
+Toy Story,John Ratzenberger,356,1
+Toy Story,Jim Varney,357,1
+Scarface,Brian De Palma,358,1
+Scarface,Al Pacino,359,1
+Scarface,F. Murray Abraham,360,1
+Scarface,Mary Elizabeth Mastrantonio,361,1
+Eternal Sunshine of the Spotless Mind,Michel Gondry,362,1
+Eternal Sunshine of the Spotless Mind,Kate Winslet,363,1
+Eternal Sunshine of the Spotless Mind,Kirsten Dunst,364,1
+Eternal Sunshine of the Spotless Mind,Tom Wilkinson,365,1
+Amadeus,Milos Forman,366,1
+Amadeus,Jeffrey Jones,367,1
+Amadeus,F. Murray Abraham,368,1
+Amadeus,Tom Hulce,369,1
+Raging Bull,Martin Scorsese,370,1
+Raging Bull,Robert De Niro,371,1
+Raging Bull,Cathy Moriarty,372,1
+Raging Bull,Frank Vincent,373,1
+Metropolis,Fritz Lang,374,1
+Metropolis,Brigitte Helm,375,1
+Metropolis,Gustav FrÌÎå_hlich,376,1
+Metropolis,Rudolf Klein-Rogge,377,1
+Unforgiven,Clint Eastwood,378,2
+Unforgiven,Morgan Freeman,380,1
+Unforgiven,Frances Fisher,381,1
+Downfall,Oliver Hirschbiegel,382,1
+Downfall,Thomas Kretschmann,383,1
+Downfall,Bruno Ganz,384,1
+Downfall,Alexandra Maria Lara,385,1
+Room,Lenny Abrahamson,386,1
+Room,Joan Allen,387,1
+Room,Jacob Tremblay,388,1
+Room,Cas Anvar,389,1
+Snatch,Guy Ritchie,390,1
+Snatch,Jason Statham,391,1
+Snatch,Brad Pitt,392,1
+Snatch,Jason Flemyng,393,1
+2001: A Space Odyssey,Stanley Kubrick,394,1
+2001: A Space Odyssey,Keir Dullea,395,1
+2001: A Space Odyssey,Gary Lockwood,396,1
+2001: A Space Odyssey,Glenn Beck,397,1
+Good Will Hunting,Gus Van Sant,398,1
+Good Will Hunting,Robin Williams,399,1
+Good Will Hunting,Matt Damon,400,1
+Good Will Hunting,Minnie Driver,401,1

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Jay Ng - Portfolio Page</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <!-- Bootstrap core CSS     -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/material-kit.css?v=1.1.0" rel="stylesheet" />
+  <!--  Material Dashboard CSS    -->
+  <link href="../assets/css/material-dashboard.css" rel="stylesheet" />
+  <!--  CSS for Demo Purpose, don't include it in your project     -->
+  <link href="../assets/css/demo.css" rel="stylesheet" />
+  <!-- CSS for vertical nav dot -->
+  <link href="../assets/css/vertical-nav.css" rel="stylesheet" />
+  <link href="../assets/css/cor.css" rel="stylesheet" />
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <script src="../js/tooltip.js"></script>
+  <script src="../js/util.js"></script>
+
+
+</head>
+
+<body>
+  <div id="myTooltip" class="myTooltip"></div>
+  <div class="wrapper">
+    <!-- sidebar -->
+    <div class="sidebar" data-active-color="purple" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+      <div class="logo">
+        <!-- <a href="../../web/about.html" class="simple-text"> -->
+        <a href="../index.html" class="simple-text">
+                    Jay Ng
+        </a>
+      </div>
+      <div class="logo logo-mini">
+        <!-- <a href="../../web/about.html" class="simple-text"> -->
+        <a href="../index.html" class="simple-text">
+                    JN
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <a href="../index.html" class="simple-text">
+            <div class="photo">
+              <img src="../assets/img/faces/small_ngchwanlii.png" />
+            </div>
+          </a>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="../index.html">
+              <i class="material-icons">face</i>
+              <p style="font-weight: bolder;font-size:18px;">About</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="../web/portfolio.html">
+              <i class="material-icons">dashboard</i>
+              <p style="font-weight: bolder;font-size:18px;">Portfolio</p>
+            </a>
+          </li>
+          <li class="active">
+            <a href="./imdb-intro.html">
+              <!-- <i class="material-icons">widgets</i> -->
+              <i class="material-icons">&#xE838;</i>
+              <p style="font-weight: bolder;font-size:18px;">IMDb Visualization</p>
+            </a>
+          </li>
+          <li>
+            <a href="../fractal_movie/fractal_movie.html">
+              <!-- <i class="material-icons">movie</i> -->
+              <i class="material-icons">&#xE838;</i>
+              <p style="font-weight: bolder;font-size:18px;">Fractal Movie</p>
+            </a>
+          </li>
+          <li>
+            <a href="../web/portfolio_software_development.html">
+              <!-- <i class="material-icons">movie</i> -->
+              <i class="material-icons">&#xE838;</i>
+              <p style="font-weight: bolder;font-size:18px;">Software Apps</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end of sidebar -->
+
+    <!-- main panel -->
+    <div class="main-panel">
+      <!-- navigation bar -->
+      <nav class="navbar navbar-black navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-minimize">
+            <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon">
+                              <i class="material-icons visible-on-sidebar-regular">more_vert</i>
+                              <i class="material-icons visible-on-sidebar-mini">view_list</i>
+                          </button>
+          </div>
+          <!-- burger menu -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+            <a class="navbar-brand" href="">
+                                Menu
+                          </a>
+          </div>
+          <!-- end of burger menu -->
+          <!-- right side navigation pills -->
+          <div class="collapse navbar-collapse">
+            <a href="http://imdb.com" class="imdb-logo">IMDb</a>
+            <ul class="nav nav-pills navbar-right">
+              <li onclick='window.location.href="../datavis/imdb-intro.html"'>
+                <a href="#intro" data-toggle="tab">Intro</a>
+              </li>
+              <li onclick='window.location.href="../datavis/imdb-genres.html"'>
+                <a href="#genres" data-toggle="tab">Genres</a>
+              </li>
+              <li class="active">
+                <a href="#statistics" data-toggle="tab">Statistics</a>
+              </li>
+              <li onclick='window.location.href="../datavis/imdb-networks.html"'>
+                <a href="#network" data-toggle="tab">Network</a>
+              </li>
+            </ul>
+          </div>
+          <!-- end of right side navigation pills -->
+        </div>
+      </nav>
+      <!-- end of navigation bar -->
+
+      <!-- graph put inside here  -->
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- all vis put inside this row  -->
+          <div class="row">
+            <!-- Director & Actor Revenue Row -->
+            <div class="col-md-12">
+                <div class="card" style="height: 750px">
+                    <div class="card-header card-header-icon" data-background-color="black">
+                        <!-- <i class="material-icons">bubble-chart</i> -->
+                        <i class="material-icons">&#xE6DD;</i>
+                    </div>
+                    <div class="card-content  statistics-vis2" id="statistics-vis2">
+                        <h2 class="card-title" style="margin-top: -15px">Top 100 Profitable Directors In Movie Industry</h2>
+                        <div style="width: 200px">
+                          <select id="directorDropDownMenu" class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
+                            <option value="0" selected> by Gross Earning ($)</option>
+                            <option value="1">by Profit ($)</option>
+                            <option value="2">by ROI (%)</option>
+                          </select>
+                        </div>
+                        <div class="togglebutton">
+                          <label style="color:black; margin-left: 15px">
+                              Average
+                              <input id="directorSwitch" type="checkbox" value="total" checked="true">
+                              Total
+                          </label>
+                        </div>
+                        <div id="directorBubbleContainer" class="map map-big" style="margin-top: 10px; height: 580px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-rotate">
+              <div class="front">
+                <div class="card-content">
+                  <h5 class="category-social text-success">
+                    <i class="fa fa-newspaper-o"></i> INSIGHT FOUR - Top 100 Profitable Directors In Movie Industry
+                  </h5>
+                  <h5 class="card-title">Description & Findings</h5>
+                  <p class="card-description myCustom">
+                    The <b>Bubble Scatterplot </b> data visualization above give an overview of which director make most profitable movie in movie industry. As you can see that
+                    I have included few filtering option such as filter by<b>Gross Earning, Profit & ROI</b> and all these factor can also be filtered by
+                    <b>Total or Average</b> when you click on the radio button switch. While <b>Steven Spielberg</b> is in the top leaderboard of either gross earning or profitable
+                    director but when you <b><u>click on ROI</u></b>, we can find out that <b>Oren Peli</b> is the director that has highest ROI, which is the director of
+                    <i>Paranormal Activity</i>.
+                    </b>
+                  </p>
+                  <br>
+                  <h5 class="card-title">Interactivity </h5>
+                  <li>
+                    <u>Filter: </u> You can select different filtering option by <b>click on the regular button or switching radio button</b> based on what you would like to explore in this data visualization.
+                  </li>
+                </div>
+              </div>
+            </div>
+            <!-- Actor Analysis  -->
+            <!-- Director & Actor Revenue Row -->
+            <div class="col-md-12">
+                <div class="card" style="height: 750px">
+                    <div class="card-header card-header-icon" data-background-color="black">
+                        <i class="material-icons">&#xE6DD;</i>
+                    </div>
+                    <div class="card-content  statistics-vis3" id="statistics-vis3">
+                        <h2 class="card-title" style="margin-top: -15px">Top 100 Profitable Actors In Movie Industry</h2>
+                        <div style="width: 200px">
+                          <select id="actorDropDownMenu" class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
+                            <option value="0" selected> by Gross Earning ($)</option>
+                            <option value="1">by Profit ($)</option>
+                            <option value="2">by ROI (%)</option>
+                          </select>
+                        </div>
+                        <div class="togglebutton">
+                          <label style="color:black; margin-left: 15px">
+                              Average
+                              <input id="actorSwitch" type="checkbox" value="total" checked="true">
+                              Total
+                          </label>
+                        </div>
+                        <div id="actorBubbleContainer" class="map map-big" style="margin-top: 10px; height: 580px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-rotate">
+              <div class="front">
+                <div class="card-content">
+                  <h5 class="category-social text-success">
+                    <i class="fa fa-newspaper-o"></i> INSIGHT FIVE - Top 100 Profitable Actors In Movie Industry
+                  </h5>
+                  <h5 class="card-title">Description & Findings</h5>
+                  <p class="card-description myCustom">
+                    The <b>Bubble Scatterplot </b> data visualization above give is quite similar to the previous one, it gives an overview of which actor make most profitable movie in movie industry. As you can see that
+                    the filtering option is available here so you can explore more different option in details. It is interesting to find out that
+                    actor <b>Gloria Stuart</b> is the most profitable actor based on average gross earning and profit, while not surprisingly, the actor in Paranormal Activity has highest ROI such as
+                    <b>Ashley Palmer</b>.
+                  </p>
+                  <br>
+                  <h5 class="card-title">Interactivity </h5>
+                  <li>
+                    <u>Filter: </u> You can select different filtering option by <b>click on the regular button or switching radio button</b> based on what you would like to explore in this data visualization.
+                  </li>
+                </div>
+              </div>
+            </div>
+            <!-- correlation matrix  row -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="black">
+                        <i class="material-icons">language</i>
+                    </div>
+                    <div class="card-content statistics-vis1" id="statistics-vis1">
+                      <h2 class="card-title" style="margin-top: -15px">Correlation Analysis on IMDb Dataset</h2>
+                      <div class="col-md-5">
+                        <h4 class="card-title" style="margin: 10px 0 0 250px">Correlation Matrix </h4>
+                        <div id="correlationMatrixContainer">
+                          <!-- correlation scatterplot matrix svg here -->
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-md-offset-1">
+                        <!-- <h4 class="card-title" style="margin: 150px 0 0 220px">Scatter Plot</h4> -->
+                        <h4 class="card-title" style="margin: 130px 0 0 220px">Scatter Plot</h4>
+                        <text id="r_coefficient" style="margin: 0px 0 20px 240px;"></text>
+                        <div id="scatterPlotContainer">
+                          <!-- scatterplot  matrix svg here -->
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-rotate">
+              <div class="front">
+                <div class="card-content">
+                  <h5 class="category-social text-success">
+                    <i class="fa fa-newspaper-o"></i> INSIGHT SIX - Correlation Analysis on IMDb Dataset
+                  </h5>
+                  <h5 class="card-title">Description</h5>
+                  <p class="card-description myCustom">
+                    I've used <b>Correlation Matrix</b>data visualization to find out the mutual relationship or connection between two properties in this dataset.
+                    There are two color coding here, green represent the positive correlation and red represent the negative correlation.
+                  </p>
+                  <br>
+                  <h5 class="card-title">Interactivity </h5>
+                  <li>
+                    <u>Hover: </u> You can hover different cell and it will pop out a scatterplot based on the two hovered properties.
+                  </li>
+                  <li>
+                    <u>Click: </u> After you hover, you can click on that cell, then move to the scatterplot to reveal more information or explore the data you
+                    would like to know. Remember unclick the cell to resume back to hover mode. This logic is set explicitly so both hover and click effect
+                    won't contradict each other.
+                  </li>
+                  <br>
+                  <h5 class="card-title">Interesting Fact</h5>
+                  <li>
+                    It is interesting to find out that the <b>movie IMDb score and # of Voted Users</b> has a <b>positive coefficient of 0.47</b>
+                    which means that they are both related to each other and has some kind of relationship.
+                    In order to have good IMDb score, the number of voted users play a key factor.
+                  </li>
+                  <li>
+                     We can also see that the <b>profit and budget have -0.47 coefficient</b>, this means that <b>throwing or investing large amount of budget
+                     for a movie doesn’t guarantee that we will have a good profit return</b>.
+                  </li>
+                  <li>
+                    It is interesting to find out that <b>The director's facebook likes has greatly affect the profit of a movies</b>. As we can see that, the director with lowest
+                    facebook like have a negative loss in profit in the scatterplot on the right side.
+                  </li>
+                  <li>
+                    I'm also curious in finding out <b>how number of faces in poster affect IMDb score</b>. As we can see that with correlation coefficient
+                    of -0.07, and by seeing the trend in the scatterplot, we know that when the poster has a lot of faces, the IMDb score start dropping to lower score.
+                  </li>
+                  <li>
+                    I also observed that <b>the duration and IMDb score</b> has 0.36 correlation coefficient, which is a postive correlation. As we can see from the scatterplot that
+                    most of the movie <b>has duration in between 50~150 minutes</b>, with IMDb score ranging from <b>highest 9.3 to lowest 1.6</b>.
+                    While increasing the duration, the movie rating start falling downward, which in my opinion that movie with too long or too short duration
+                    will have negative effect on viewers, they either get too bored when duration is long or haven't watching enough for a movie if the duration is
+                    short. Which will then affect the IMDb score when they rate on the movie.
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- footer area -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="social-line social-line-white text-center">
+	        		<div class="container">
+	        			<div class="row">
+                  <a href="https://www.linkedin.com/in/ngchwanlii/">
+                    <button class="btn btn-just-icon btn-round btn-linkedin">
+                        <i class="fa fa-linkedin"></i>
+                    </button>
+                  </a>
+                  <a href="https://github.com/ngchwanlii">
+                    <button class="btn btn-just-icon btn-round btn-github">
+                        <i class="fa fa-github"></i>
+                    </button>
+                  </a>
+                  <a href="https://twitter.com/ngchwanlii">
+                    <button class="btn btn-just-icon btn-round btn-twitter">
+                        <i class="fa fa-twitter"></i>
+                    </button>
+                  </a>
+                  <a href="https://plus.google.com/u/0/116480728305685079134">
+                    <button class="btn btn-just-icon btn-round btn-google">
+                        <i class="fa fa-google"> </i>
+                    </button>
+                  </a>
+                  <!-- <a href="">
+                    <button class="btn btn-just-icon btn-round btn-facebook">
+
+                        <i class="fa fa-facebook"> </i>
+                    </button>
+                  </a> -->
+	        			</div>
+	        		</div>
+	        	</div>
+        </div>
+      </footer>
+      <!-- end of footer area -->
+    </div>
+    <!-- end of main panel -->
+  </div>
+  </div>
+  <script type="text/javascript">
+      $("[name='directorSwitch']").on("switch-change", function() {
+        // console.log(this)
+      })
+  </script>
+</body>
+<!--   Core JS Files   -->
+<script src="../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/js/material.min.js" type="text/javascript"></script>
+<script src="../assets/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery.bootstrap-wizard.js"></script>
+<script src="../assets/js/bootstrap-notify.js"></script>
+<script src="../assets/js/jquery-jvectormap.js"></script>
+<script src="../assets/js/nouislider.min.js"></script>
+<script src="../assets/js/jquery.select-bootstrap.js"></script>
+<script src="../assets/js/material-dashboard.js"></script>
+
+<!-- data vis script -->
+<script src="../js/correlationMatrix.js"></script>
+<script src="../js/scatterPlot.js"></script>
+<script src="../js/directorBubble.js"></script>
+<script src="../js/actorBubble.js"></script>
+
+</html>

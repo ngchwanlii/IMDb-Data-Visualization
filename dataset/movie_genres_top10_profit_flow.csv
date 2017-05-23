@@ -1,0 +1,11 @@
+movieTitle,genres,movieIMDbLink,gross,budget,imdbScore,profit,ROI
+Avatar,Action|Adventure|Fantasy|Sci-Fi,http://www.imdb.com/title/tt0499549/?ref_=fn_tt_tt_1,760505847,237000000,7.9,523505847,220.8885430379747
+Jurassic World,Action|Adventure|Sci-Fi|Thriller,http://www.imdb.com/title/tt0369610/?ref_=fn_tt_tt_1,652177271,150000000,7,502177271,334.78484733333335
+Titanic,Drama|Romance,http://www.imdb.com/title/tt0120338/?ref_=fn_tt_tt_1,658672302,200000000,7.7,458672302,229.336151
+Star Wars: Episode IV - A New Hope,Action|Adventure|Fantasy|Sci-Fi,http://www.imdb.com/title/tt0076759/?ref_=fn_tt_tt_1,460935665,11000000,8.7,449935665,4090.3242272727275
+E.T. the Extra-Terrestrial,Family|Sci-Fi,http://www.imdb.com/title/tt0083866/?ref_=fn_tt_tt_1,434949459,10500000,7.9,424449459,4042.3758
+The Avengers,Action|Adventure|Sci-Fi,http://www.imdb.com/title/tt0848228/?ref_=fn_tt_tt_1,623279547,220000000,8.1,403279547,183.308885
+The Lion King,Adventure|Animation|Drama|Family|Musical,http://www.imdb.com/title/tt0110357/?ref_=fn_tt_tt_1,422783777,45000000,8.5,377783777,839.5195044444444
+Star Wars: Episode I - The Phantom Menace,Action|Adventure|Fantasy|Sci-Fi,http://www.imdb.com/title/tt0120915/?ref_=fn_tt_tt_1,474544677,115000000,6.5,359544677,312.6475452173913
+The Dark Knight,Action|Crime|Drama|Thriller,http://www.imdb.com/title/tt0468569/?ref_=fn_tt_tt_1,533316061,185000000,9,348316061,188.2789518918919
+The Hunger Games,Adventure|Drama|Sci-Fi|Thriller,http://www.imdb.com/title/tt1392170/?ref_=fn_tt_tt_1,407999255,78000000,7.3,329999255,423.07596794871796

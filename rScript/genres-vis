@@ -1,0 +1,18 @@
+# Set libPaths.
+.libPaths("/Users/jayng/.exploratory/R/3.3")
+
+# Load required packages.
+library(janitor)
+library(lubridate)
+library(hms)
+library(tidyr)
+library(stringr)
+library(readr)
+library(forcats)
+library(RcppRoll)
+library(dplyr)
+library(exploratory)
+
+# Steps to produce the output
+exploratory::read_delim_file("/Users/jayng/Documents/USF CS Course/2017 Sem 1/CS 360 - Data Visualization/6. Final Project/project-ngchwanlii/dataset/movie.csv" , ",", quote = "\"", skip = 0 , col_names = TRUE , na = c("","NA") , locale=locale(encoding = "ISO-8859-1", decimal_mark = "."), trim_ws = FALSE , progress = FALSE) %>% exploratory::clean_data_frame() %>%
+mutate(numUsersForReviews = impute_na(numUsersForReviews, type = "value", val = 0), numVotedUsers = impute_na(numVotedUsers, type = "value", val = 0), numCriticsForReviews = impute_na(numCriticsForReviews, type = "value", val = 0), castMemberFBLikes = impute_na(castMemberFBLikes, type = "value", val = 0), movieFBLikes = impute_na(movieFBLikes, type = "value", val = 0), directorFBLikes = impute_na(directorFBLikes, type = "value", val = 0), actor1FBLikes = impute_na(actor1FBLikes, type = "value", val = 0), actor2FBLikes = impute_na(actor2FBLikes, type = "value", val = 0), actor3FBLikes = impute_na(actor3FBLikes, type = "value", val = 0), movieTitle = str_replace_all(movieTitle, "åÊ", ""))
