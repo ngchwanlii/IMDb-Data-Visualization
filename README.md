@@ -12,3 +12,4 @@ understand trends, outliers, patterns in data and produce interesting insights
 - Javascript
 - HTML5
 - CSS
+- R
