@@ -1,4 +1,12 @@
 # IMDb-Data-Visualization
-Visualize IMDb Dataset using D3, Javascript,  HTML5, CSS
+Explore IMDb Dataset visually to provide an accessible way to 
+understand trends, outliers, patterns in data and produce interesting insights
 
-Website URL: https://ngchwanlii.github.io/datavis/imdb-intro.html
+# Demo
+- See [demo](https://peaceful-tesla-ed60e6.netlify.com/) here.
+
+# Technology Stacks
+- D3.js
+- Javascript
+- HTML5
+- CSS
