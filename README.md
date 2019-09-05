@@ -1,4 +1,4 @@
-# IMDb-Data-Visualization
+# IMDb Data Visualization
 Explore IMDb Dataset visually to provide an accessible way to 
 understand trends, outliers, patterns in data and produce interesting insights
 
